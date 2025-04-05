@@ -28,7 +28,7 @@ const Header = () => {
           <div className="flex items-center">
             <a href="/" className="text-2xl font-bold flex items-center gap-2">
               <span className="text-white rounded-md bg-quantminds-purple/90 px-2">Q</span>
-              <span className={`transition-all ${isScrolled ? 'text-white' : 'text-white'}`}>QuantMinds</span>
+              <span className={`transition-all ${isScrolled ? 'text-white' : 'text-white'}`}>QuantaMind</span>
             </a>
           </div>
           

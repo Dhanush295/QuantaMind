@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="md:col-span-1">
             <a href="/" className="text-2xl font-bold flex items-center gap-2 mb-4">
               <span className="text-white rounded-md bg-quantminds-purple/90 px-2">Q</span>
-              <span className="text-white">QuantMinds</span>
+              <span className="text-white">QuantaMind</span>
             </a>
             <p className="text-gray-400 mb-4">
               AI-powered business intelligence through GPU-accelerated custom models.
@@ -67,7 +67,7 @@ const Footer = () => {
         <div className="pt-8 mt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm">
-              &copy; {currentYear} QuantMinds AI. All rights reserved.
+              &copy; {currentYear} QuantaMind AI. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0">
               <a href="#" className="text-gray-500 hover:text-white text-sm transition">
