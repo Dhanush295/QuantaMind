@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// QuantMinds custom colors
+				quantminds: {
+					purple: {
+						DEFAULT: '#9b87f5',
+						light: '#D6BCFA',
+						dark: '#6E59A5',
+						darker: '#1A1F2C',
+					},
+					blue: {
+						DEFAULT: '#1EAEDB',
+						light: '#33C3F0',
+					},
+					gray: {
+						DEFAULT: '#8E9196',
+						light: '#C8C8C9',
+						dark: '#221F26',
+					}
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +103,36 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
+				'pulse-subtle': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.85' },
+				},
+				'glow': {
+					'0%, 100%': { boxShadow: '0 0 5px rgba(155, 135, 245, 0.5)' },
+					'50%': { boxShadow: '0 0 20px rgba(155, 135, 245, 0.8)' },
+				},
+				'data-flow': {
+					'0%': { transform: 'translateX(-100%)' },
+					'100%': { transform: 'translateX(100%)' },
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 4s ease-in-out infinite',
+				'pulse-subtle': 'pulse-subtle 3s ease-in-out infinite',
+				'glow': 'glow 3s ease-in-out infinite',
+				'data-flow': 'data-flow 5s linear infinite',
+			},
+			backgroundImage: {
+				'hero-pattern': "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgODAwIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNMCAwaDQwdjQwSDB6IiBmaWxsPSJub25lIiBzdHJva2U9IiM5Yjg3ZjUyMCIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIj48L3JlY3Q+PC9zdmc+')",
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
