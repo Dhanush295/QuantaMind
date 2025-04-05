@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,16 +19,16 @@ const Footer = () => {
               AI-powered business intelligence through GPU-accelerated custom models.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-quantminds-purple transition">
+              <Link to="/coming-soon" className="text-gray-400 hover:text-quantminds-purple transition">
                 <Github size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-quantminds-purple transition">
+              </Link>
+              <Link to="/coming-soon" className="text-gray-400 hover:text-quantminds-purple transition">
                 <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-quantminds-purple transition">
+              </Link>
+              <Link to="/coming-soon" className="text-gray-400 hover:text-quantminds-purple transition">
                 <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-quantminds-purple transition">
+              </Link>
+              <a href="mailto:dg1@toromail.csudh.edu" className="text-gray-400 hover:text-quantminds-purple transition">
                 <Mail size={20} />
               </a>
             </div>
@@ -36,30 +37,30 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition">About</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Careers</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Contact</a></li>
+              <li><Link to="/coming-soon" className="text-gray-400 hover:text-white transition">About</Link></li>
+              <li><Link to="/coming-soon" className="text-gray-400 hover:text-white transition">Careers</Link></li>
+              <li><Link to="/coming-soon" className="text-gray-400 hover:text-white transition">Blog</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-white transition">Contact</Link></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-white font-semibold mb-4">Product</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Features</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Pricing</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Documentation</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">API Reference</a></li>
+              <li><a href="#features" className="text-gray-400 hover:text-white transition">Features</a></li>
+              <li><Link to="/coming-soon" className="text-gray-400 hover:text-white transition">Pricing</Link></li>
+              <li><Link to="/coming-soon" className="text-gray-400 hover:text-white transition">Documentation</Link></li>
+              <li><Link to="/coming-soon" className="text-gray-400 hover:text-white transition">API Reference</Link></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-white font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Terms of Service</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Cookie Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Security</a></li>
+              <li><Link to="/coming-soon" className="text-gray-400 hover:text-white transition">Privacy Policy</Link></li>
+              <li><Link to="/coming-soon" className="text-gray-400 hover:text-white transition">Terms of Service</Link></li>
+              <li><Link to="/coming-soon" className="text-gray-400 hover:text-white transition">Cookie Policy</Link></li>
+              <li><Link to="/coming-soon" className="text-gray-400 hover:text-white transition">Security</Link></li>
             </ul>
           </div>
         </div>
@@ -70,9 +71,9 @@ const Footer = () => {
               &copy; {currentYear} QuantaMind AI. All rights reserved.
             </p>
             <div className="mt-4 md:mt-0">
-              <a href="#" className="text-gray-500 hover:text-white text-sm transition">
-                Made with cutting-edge GPU infrastructure
-              </a>
+              <p className="text-gray-500 text-sm">
+                Contact: <a href="mailto:dg1@toromail.csudh.edu" className="hover:text-white transition">dg1@toromail.csudh.edu</a>
+              </p>
             </div>
           </div>
         </div>
