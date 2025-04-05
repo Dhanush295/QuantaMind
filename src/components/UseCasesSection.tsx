@@ -1,13 +1,13 @@
 
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Movie, ShoppingCart, TrendingUp, HeartPulse, Target } from 'lucide-react';
+import { Film, ShoppingCart, TrendingUp, HeartPulse, Target } from 'lucide-react';
 
 const useCases = [
   {
     title: "Movie & Product Recommendations",
     description: "Drive more sales with personalized recommendations based on user behavior.",
-    icon: Movie,
+    icon: Film,
     color: "bg-quantminds-purple/20",
     iconColor: "text-quantminds-purple"
   },
