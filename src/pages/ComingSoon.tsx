@@ -26,9 +26,11 @@ const ComingSoon = () => {
         </p>
         
         <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-12">
-          <Button size="lg" className="font-medium gap-2 bg-quantminds-purple hover:bg-quantminds-purple/90">
-            <Mail className="h-4 w-4" /> Contact Us
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" className="font-medium gap-2 bg-quantminds-purple hover:bg-quantminds-purple/90">
+              <Mail className="h-4 w-4" /> Contact Us
+            </Button>
+          </Link>
           <Link to="/">
             <Button variant="outline" size="lg" className="font-medium">
               Back to Homepage

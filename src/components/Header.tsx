@@ -37,6 +37,7 @@ const Header = () => {
             <a href="#features" className="text-gray-300 hover:text-white transition">Features</a>
             <a href="#usecases" className="text-gray-300 hover:text-white transition">Use Cases</a>
             <a href="#howitworks" className="text-gray-300 hover:text-white transition">How It Works</a>
+            <Link to="/contact" className="text-gray-300 hover:text-white transition">Contact</Link>
             <Link to="/coming-soon">
               <Button variant="outline" size="sm">
                 Login
@@ -86,6 +87,13 @@ const Header = () => {
             >
               How It Works
             </a>
+            <Link 
+              to="/contact" 
+              className="text-gray-300 hover:text-white transition"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
             <div className="pt-4 flex flex-col space-y-4 w-48">
               <Link to="/coming-soon">
                 <Button variant="outline" className="w-full">
