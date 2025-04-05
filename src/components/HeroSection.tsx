@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Cpu, Database, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -32,12 +33,16 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button size="lg" className="font-medium gap-2 bg-quantminds-purple hover:bg-quantminds-purple/90">
-              Get Early Access <ArrowRight size={16} />
-            </Button>
-            <Button variant="outline" size="lg" className="font-medium">
-              Schedule a Demo
-            </Button>
+            <Link to="/coming-soon">
+              <Button size="lg" className="font-medium gap-2 bg-quantminds-purple hover:bg-quantminds-purple/90">
+                Get Early Access <ArrowRight size={16} />
+              </Button>
+            </Link>
+            <Link to="/coming-soon">
+              <Button variant="outline" size="lg" className="font-medium">
+                Schedule a Demo
+              </Button>
+            </Link>
           </div>
           
           <div className="mt-12 flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-4">

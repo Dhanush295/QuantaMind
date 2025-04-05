@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -28,7 +29,7 @@ const Header = () => {
           <div className="flex items-center">
             <a href="/" className="text-2xl font-bold flex items-center gap-2">
               <span className="text-white rounded-md bg-quantminds-purple/90 px-2">Q</span>
-              <span className={`transition-all ${isScrolled ? 'text-white' : 'text-white'}`}>QuantMinds</span>
+              <span className={`transition-all ${isScrolled ? 'text-white' : 'text-white'}`}>QuantaMind</span>
             </a>
           </div>
           
@@ -36,12 +37,16 @@ const Header = () => {
             <a href="#features" className="text-gray-300 hover:text-white transition">Features</a>
             <a href="#usecases" className="text-gray-300 hover:text-white transition">Use Cases</a>
             <a href="#howitworks" className="text-gray-300 hover:text-white transition">How It Works</a>
-            <Button variant="outline" size="sm">
-              Login
-            </Button>
-            <Button size="sm" className="bg-quantminds-purple hover:bg-quantminds-purple/90">
-              Get Started
-            </Button>
+            <Link to="/coming-soon">
+              <Button variant="outline" size="sm">
+                Login
+              </Button>
+            </Link>
+            <Link to="/coming-soon">
+              <Button size="sm" className="bg-quantminds-purple hover:bg-quantminds-purple/90">
+                Get Started
+              </Button>
+            </Link>
           </nav>
           
           <div className="md:hidden">
@@ -82,12 +87,16 @@ const Header = () => {
               How It Works
             </a>
             <div className="pt-4 flex flex-col space-y-4 w-48">
-              <Button variant="outline" className="w-full">
-                Login
-              </Button>
-              <Button className="w-full bg-quantminds-purple hover:bg-quantminds-purple/90">
-                Get Started
-              </Button>
+              <Link to="/coming-soon">
+                <Button variant="outline" className="w-full">
+                  Login
+                </Button>
+              </Link>
+              <Link to="/coming-soon">
+                <Button className="w-full bg-quantminds-purple hover:bg-quantminds-purple/90">
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </nav>
         </div>
