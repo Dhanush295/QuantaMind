@@ -89,7 +89,7 @@ const UseCasesSection = () => {
         <div className="mt-20">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">Delivery Options</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-center mb-12">
-            Choose how you want to implement QuantMinds AI in your business
+            Choose how you want to implement QuantaMind AI in your business
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">

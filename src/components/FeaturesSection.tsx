@@ -51,7 +51,7 @@ const FeaturesSection = () => {
             <span className="text-gradient">The Power of AI</span>, Tailored for Your Business
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            QuantMinds delivers enterprise-grade AI without the enterprise-grade complexity.
+            QuantaMind delivers enterprise-grade AI without the enterprise-grade complexity.
           </p>
         </div>
         
