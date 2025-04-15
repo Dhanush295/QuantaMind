@@ -140,7 +140,7 @@ const HeroSection = () => {
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               Ready to take your business to the next level? Let's schedule a meeting to discuss your unique business needs. 
-              Using our powerful infrastructure, we'll help you build a custom AI or LLM tailored to your data. 
+              Using our powerful infrastructure, we'll help you build a custom AI tailored to your data. 
               You focus on growing your business—let us handle the AI.
             </p>
             <Link to="/contact">
