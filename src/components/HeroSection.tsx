@@ -24,9 +24,10 @@ const HeroSection = () => {
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
-            <span className="text-gradient">Built for Your Business</span>
-          </h1>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
+             <span className="text-gradient">Smarter AI,</span> <br />
+             Built for Your Business
+           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8">
             Build your own AI Agent using our in-house powerful infrastructure.
