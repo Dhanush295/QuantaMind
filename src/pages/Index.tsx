@@ -6,7 +6,6 @@ import FeaturesSection from '@/components/FeaturesSection';
 import UseCasesSection from '@/components/UseCasesSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import CTASection from '@/components/CTASection';
-import ContactSection from '@/components/ContactSection';
 
 const Index = () => {
   return (
@@ -29,10 +28,6 @@ const Index = () => {
         </section>
         
         <CTASection />
-        
-        <section id="contact">
-          <ContactSection />
-        </section>
       </main>
       
       <Footer />
