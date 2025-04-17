@@ -4,10 +4,10 @@ import { Bot, Database, Lock, Zap, Plug, ChartBar, Brain, Cpu } from 'lucide-rea
 
 const features = [
   {
-    title: "Custom AI Agents",
-    description: "Build specialized AI agents tailored to your business processes and requirements.",
-    icon: Bot,
-    color: "text-quantminds-purple"
+    title: "Custom AI Models",
+    description: "Train models that are tailored specifically to your business data and needs.",
+    icon: Cpu,
+    color: "text-quantminds-blue"
   },
   {
     title: "Custom LLM AI Agents",
@@ -21,12 +21,7 @@ const features = [
     icon: Zap,
     color: "text-quantminds-purple"
   },
-  {
-    title: "Custom AI Models",
-    description: "Train models that are tailored specifically to your business data and needs.",
-    icon: Cpu,
-    color: "text-quantminds-blue"
-  },
+  
   {
     title: "Your Data Stays Yours",
     description: "Full control with secure training and updates. We never see your sensitive information.",
