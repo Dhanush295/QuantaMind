@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Cpu, Database, Zap, Lock, Code2, Briefcase } from 'lucide-react';
+import { ArrowRight, Cpu, Database, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
@@ -20,49 +21,53 @@ const HeroSection = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-quantminds-purple opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-quantminds-purple"></span>
               </span>
-              B2B AI Infrastructure-as-a-Service
+              Now in Early Access
             </span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
-            <span className="text-gradient">Enterprise AI Solutions</span> <br />
-            Powered by Your Data
+            <span className="text-gradient">Smarter AI,</span> <br />
+            Built for Your Business
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8">
-            We help businesses build and scale secure, custom AI models and LLMs using their own data — without needing in-house AI teams. Powered by high-speed GPU infrastructure and enterprise-grade APIs.
+              Build your own AI model using our in-house powerful infrastructure.
+          </p>
+
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8">
+              We help businesses build and run custom AI models tailored to their needs, using their own data on secure, high-speed GPU infrastructure. You focus on your business—we take care of the AI.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Link to="/contact">
+            <Link to="/coming-soon">
               <Button size="lg" className="font-medium gap-2 bg-quantminds-purple hover:bg-quantminds-purple/90">
-                Get Started <ArrowRight size={16} />
+                Get Early Access <ArrowRight size={16} />
               </Button>
             </Link>
-            <Link to="/contact">
+            <Link to="/coming-soon">
               <Button variant="outline" size="lg" className="font-medium">
                 Schedule a Demo
               </Button>
             </Link>
           </div>
 
-          <div className="mt-10 sm:mt-12 grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <div className="mt-10 sm:mt-12 flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-4">
             <div className="flex items-center gap-2">
-              <Lock size={20} className="text-quantminds-purple" />
-              <span className="text-sm text-muted-foreground">Secure & Private</span>
+              <Zap size={20} className="text-quantminds-purple" />
+              <span className="text-sm text-muted-foreground">CUDA Optimized</span>
             </div>
             <div className="flex items-center gap-2">
               <Cpu size={20} className="text-quantminds-purple" />
-              <span className="text-sm text-muted-foreground">GPU Powered</span>
+              <span className="text-sm text-muted-foreground">GPU Accelerated</span>
             </div>
             <div className="flex items-center gap-2">
-              <Code2 size={20} className="text-quantminds-purple" />
-              <span className="text-sm text-muted-foreground">Enterprise APIs</span>
+              <Database size={20} className="text-quantminds-purple" />
+              <span className="text-sm text-muted-foreground">Your Data, Your Models</span>
             </div>
           </div>
         </div>
 
-        {/* Right Side: Visualization */}
+        {/* Right Visualization */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg aspect-square glassmorphism rounded-xl overflow-hidden animate-float">
             {/* Animated Panels */}
@@ -124,6 +129,27 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
+
+        </div>
+
+        {/* Contact Us Section */}
+        <div className="relative z-10 container mx-auto mt-16 sm:mt-24 px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Contact Us – Let's Build Your AI Together
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              Ready to take your business to the next level? Let's schedule a meeting to discuss your unique business needs. 
+              Using our powerful infrastructure, we'll help you build a custom AI tailored to your data. 
+              You focus on growing your business—let us handle the AI.
+            </p>
+            <Link to="/contact">
+              <Button size="lg" className="font-medium gap-2 bg-quantminds-purple hover:bg-quantminds-purple/90">
+                Contact Us
+              </Button>
+            </Link>
+          </div>
+
       </div>
     </div>
   );

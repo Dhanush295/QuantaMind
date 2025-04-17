@@ -1,42 +1,42 @@
 
 import React from 'react';
-import { Cpu, Database, Lock, Zap, Code2, Briefcase, Server, Users } from 'lucide-react';
+import { Cpu, Database, Lock, Zap, Plug, ChartBar } from 'lucide-react';
 
 const features = [
   {
-    title: "GPU-Powered Infrastructure",
-    description: "Built with Boost C++, CUDA, cuDNN & cuBLAS for maximum performance on high-end GPUs.",
-    icon: Cpu,
+    title: "Blazing-Fast GPU Training",
+    description: "Built with CUDA, cuDNN & cuBLAS for maximum performance on GPU infrastructure.",
+    icon: Zap,
     color: "text-quantminds-purple"
   },
   {
-    title: "Custom LLM Training",
-    description: "Train and fine-tune large language models using your proprietary business data.",
-    icon: Database,
+    title: "Custom AI Models",
+    description: "Train models that are tailored specifically to your business data and needs.",
+    icon: Cpu,
     color: "text-quantminds-blue"
   },
   {
-    title: "Enterprise-Grade Security",
-    description: "Your data remains private and secure with our isolated training environments.",
+    title: "Flexible API Integration",
+    description: "Works seamlessly with REST, FastAPI, Spring Boot or any backend of your choice.",
+    icon: Plug,
+    color: "text-quantminds-purple"
+  },
+  {
+    title: "Live Predictions",
+    description: "Get real-time insights and recommendations through our high-performance API.",
+    icon: ChartBar,
+    color: "text-quantminds-blue"
+  },
+  {
+    title: "Your Data Stays Yours",
+    description: "Full control with secure training and updates. We never see your sensitive information.",
     icon: Lock,
     color: "text-quantminds-purple"
   },
   {
-    title: "API Integration",
-    description: "Seamless integration via REST, SOAP, and gRPC APIs with comprehensive documentation.",
-    icon: Code2,
-    color: "text-quantminds-blue"
-  },
-  {
-    title: "Managed Infrastructure",
-    description: "We handle deployment, scaling, and maintenance of your AI infrastructure.",
-    icon: Server,
-    color: "text-quantminds-purple"
-  },
-  {
-    title: "Expert Support",
-    description: "Personalized support for model tuning, optimization, and scaling strategies.",
-    icon: Users,
+    title: "Easy Data Management",
+    description: "Simple interfaces for uploading, transforming, and managing your training datasets.",
+    icon: Database,
     color: "text-quantminds-blue"
   }
 ];
@@ -48,10 +48,10 @@ const FeaturesSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-gradient">Enterprise AI</span> Made Simple
+            <span className="text-gradient">The Power of AI</span>, Tailored for Your Business
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            QuantaMind delivers enterprise-grade AI infrastructure without the complexity.
+            QuantaMind delivers enterprise-grade AI without the enterprise-grade complexity.
           </p>
         </div>
         
