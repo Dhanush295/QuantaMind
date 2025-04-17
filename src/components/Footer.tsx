@@ -72,7 +72,7 @@ const Footer = () => {
             </p>
             <div className="mt-4 md:mt-0">
               <p className="text-gray-500 text-sm">
-                Contact: <a href="mailto:dg1@toromail.csudh.edu" className="hover:text-white transition">dg1@toromail.csudh.edu</a>
+                Contact: <a href="mailto:dg1@toromail.csudh.edu" className="hover:text-white transition">info@quantamind.co</a>
               </p>
             </div>
           </div>
