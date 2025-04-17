@@ -20,17 +20,17 @@ const HeroSection = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-quantminds-purple opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-quantminds-purple"></span>
               </span>
-              AI Infrastructure-as-a-Service
+              B2B AI Infrastructure-as-a-Service
             </span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
-            <span className="text-gradient">Scale Your AI</span> <br />
-            Without the Complexity
+            <span className="text-gradient">Enterprise AI Solutions</span> <br />
+            Powered by Your Data
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8">
-            We help businesses build and scale secure, custom AI models using their own data — without needing in-house AI teams. Powered by high-speed GPU infrastructure and enterprise-grade APIs.
+            We help businesses build and scale secure, custom AI models and LLMs using their own data — without needing in-house AI teams. Powered by high-speed GPU infrastructure and enterprise-grade APIs.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -62,7 +62,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Right Side: Keep the existing visualization */}
+        {/* Right Side: Visualization */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg aspect-square glassmorphism rounded-xl overflow-hidden animate-float">
             {/* Animated Panels */}
@@ -122,84 +122,6 @@ const HeroSection = () => {
               <div className="absolute h-1 w-12 bg-quantminds-blue/50 rounded-full animate-data-flow" style={{ top: '50%', animationDelay: '1.5s' }}></div>
               <div className="absolute h-1 w-16 bg-quantminds-purple/50 rounded-full animate-data-flow" style={{ top: '70%', animationDelay: '3s' }}></div>
             </div>
-          </div>
-        </div>
-
-        {/* Contact Us Section */}
-        <div className="relative z-10 container mx-auto mt-16 sm:mt-24 px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Contact Us – Let's Build Your AI Together
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Ready to take your business to the next level? Let's schedule a meeting to discuss your unique business needs. 
-              Using our powerful infrastructure, we'll help you build a custom AI tailored to your data. 
-              You focus on growing your business—let us handle the AI.
-            </p>
-            <Link to="/contact">
-              <Button size="lg" className="font-medium gap-2 bg-quantminds-purple hover:bg-quantminds-purple/90">
-                Contact Us
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Executive Summary Section */}
-      <div className="relative z-10 container mx-auto mt-16 sm:mt-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="glassmorphism p-6 rounded-xl">
-            <h3 className="text-xl font-semibold mb-4">Problems We Solve</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-2">
-                <Briefcase className="h-5 w-5 text-quantminds-purple mt-1" />
-                <span className="text-muted-foreground">Limited tech teams struggling with AI integration</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Cpu className="h-5 w-5 text-quantminds-purple mt-1" />
-                <span className="text-muted-foreground">High costs of GPUs and AI talent</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Lock className="h-5 w-5 text-quantminds-purple mt-1" />
-                <span className="text-muted-foreground">Data security concerns with third-party tools</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="glassmorphism p-6 rounded-xl">
-            <h3 className="text-xl font-semibold mb-4">Our Solution</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-2">
-                <Database className="h-5 w-5 text-quantminds-purple mt-1" />
-                <span className="text-muted-foreground">Custom LLM training with your data</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Code2 className="h-5 w-5 text-quantminds-purple mt-1" />
-                <span className="text-muted-foreground">Secure API integration (REST, SOAP, gRPC)</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Zap className="h-5 w-5 text-quantminds-purple mt-1" />
-                <span className="text-muted-foreground">High-performance GPU infrastructure</span>
-              </li>
-            </ul>
-          </div>
-
-          <div className="glassmorphism p-6 rounded-xl md:col-span-2 lg:col-span-1">
-            <h3 className="text-xl font-semibold mb-4">Target Industries</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-2">
-                <Briefcase className="h-5 w-5 text-quantminds-purple mt-1" />
-                <span className="text-muted-foreground">Healthcare & Finance</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Briefcase className="h-5 w-5 text-quantminds-purple mt-1" />
-                <span className="text-muted-foreground">Legal & E-Commerce</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <Briefcase className="h-5 w-5 text-quantminds-purple mt-1" />
-                <span className="text-muted-foreground">AI Startups & Enterprise</span>
-              </li>
-            </ul>
           </div>
         </div>
       </div>
