@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Cpu, Database, Zap } from 'lucide-react';
+import { ArrowRight, Cpu, Database, Zap, Lock, Code2, Briefcase } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
@@ -21,53 +20,49 @@ const HeroSection = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-quantminds-purple opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-quantminds-purple"></span>
               </span>
-              Now in Early Access
+              AI Infrastructure-as-a-Service
             </span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
-            <span className="text-gradient">Smarter AI,</span> <br />
-            Built for Your Business
+            <span className="text-gradient">Scale Your AI</span> <br />
+            Without the Complexity
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8">
-              Build your own AI model using our in-house powerful infrastructure.
-          </p>
-
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8">
-              We help businesses build and run custom AI models tailored to their needs, using their own data on secure, high-speed GPU infrastructure. You focus on your business—we take care of the AI.
+            We help businesses build and scale secure, custom AI models using their own data — without needing in-house AI teams. Powered by high-speed GPU infrastructure and enterprise-grade APIs.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Link to="/coming-soon">
+            <Link to="/contact">
               <Button size="lg" className="font-medium gap-2 bg-quantminds-purple hover:bg-quantminds-purple/90">
-                Get Early Access <ArrowRight size={16} />
+                Get Started <ArrowRight size={16} />
               </Button>
             </Link>
-            <Link to="/coming-soon">
+            <Link to="/contact">
               <Button variant="outline" size="lg" className="font-medium">
                 Schedule a Demo
               </Button>
             </Link>
           </div>
 
-          <div className="mt-10 sm:mt-12 flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-4">
+          <div className="mt-10 sm:mt-12 grid grid-cols-2 sm:grid-cols-3 gap-4">
             <div className="flex items-center gap-2">
-              <Zap size={20} className="text-quantminds-purple" />
-              <span className="text-sm text-muted-foreground">CUDA Optimized</span>
+              <Lock size={20} className="text-quantminds-purple" />
+              <span className="text-sm text-muted-foreground">Secure & Private</span>
             </div>
             <div className="flex items-center gap-2">
               <Cpu size={20} className="text-quantminds-purple" />
-              <span className="text-sm text-muted-foreground">GPU Accelerated</span>
+              <span className="text-sm text-muted-foreground">GPU Powered</span>
             </div>
             <div className="flex items-center gap-2">
-              <Database size={20} className="text-quantminds-purple" />
-              <span className="text-sm text-muted-foreground">Your Data, Your Models</span>
+              <Code2 size={20} className="text-quantminds-purple" />
+              <span className="text-sm text-muted-foreground">Enterprise APIs</span>
             </div>
           </div>
         </div>
 
-        {/* Right Visualization */}
+        {/* Right Side: Keep the existing visualization */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg aspect-square glassmorphism rounded-xl overflow-hidden animate-float">
             {/* Animated Panels */}
@@ -130,8 +125,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        </div>
-
         {/* Contact Us Section */}
         <div className="relative z-10 container mx-auto mt-16 sm:mt-24 px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -149,7 +142,66 @@ const HeroSection = () => {
               </Button>
             </Link>
           </div>
+        </div>
+      </div>
 
+      {/* Executive Summary Section */}
+      <div className="relative z-10 container mx-auto mt-16 sm:mt-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="glassmorphism p-6 rounded-xl">
+            <h3 className="text-xl font-semibold mb-4">Problems We Solve</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-2">
+                <Briefcase className="h-5 w-5 text-quantminds-purple mt-1" />
+                <span className="text-muted-foreground">Limited tech teams struggling with AI integration</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Cpu className="h-5 w-5 text-quantminds-purple mt-1" />
+                <span className="text-muted-foreground">High costs of GPUs and AI talent</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Lock className="h-5 w-5 text-quantminds-purple mt-1" />
+                <span className="text-muted-foreground">Data security concerns with third-party tools</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="glassmorphism p-6 rounded-xl">
+            <h3 className="text-xl font-semibold mb-4">Our Solution</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-2">
+                <Database className="h-5 w-5 text-quantminds-purple mt-1" />
+                <span className="text-muted-foreground">Custom LLM training with your data</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Code2 className="h-5 w-5 text-quantminds-purple mt-1" />
+                <span className="text-muted-foreground">Secure API integration (REST, SOAP, gRPC)</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Zap className="h-5 w-5 text-quantminds-purple mt-1" />
+                <span className="text-muted-foreground">High-performance GPU infrastructure</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="glassmorphism p-6 rounded-xl md:col-span-2 lg:col-span-1">
+            <h3 className="text-xl font-semibold mb-4">Target Industries</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-2">
+                <Briefcase className="h-5 w-5 text-quantminds-purple mt-1" />
+                <span className="text-muted-foreground">Healthcare & Finance</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Briefcase className="h-5 w-5 text-quantminds-purple mt-1" />
+                <span className="text-muted-foreground">Legal & E-Commerce</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Briefcase className="h-5 w-5 text-quantminds-purple mt-1" />
+                <span className="text-muted-foreground">AI Startups & Enterprise</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );
