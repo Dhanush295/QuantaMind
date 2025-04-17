@@ -64,11 +64,11 @@ const Contact = () => {
                 <div className="mb-6">
                   <h3 className="font-medium mb-2">Email Us</h3>
                   <a 
-                    href="mailto:dg1@toromail.csudh.edu" 
+                    href="mailto:info@quantamind.co" 
                     className="flex items-center gap-2 text-quantminds-purple hover:underline"
                   >
                     <Mail className="h-4 w-4" />
-                    dg1@toromail.csudh.edu
+                    info@quantamind.co
                   </a>
                 </div>
                 
