@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Cpu, Database, Zap } from 'lucide-react';
@@ -26,16 +25,15 @@ const HeroSection = () => {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
-            <span className="text-gradient">Smarter AI,</span> <br />
-            Built for Your Business
+            <span className="text-gradient">Built for Your Business</span>
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8">
-              Build your own AI model using our in-house powerful infrastructure.
+            Build your own AI Agent using our in-house powerful infrastructure.
           </p>
 
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8">
-              We help businesses build and run custom AI models tailored to their needs, using their own data on secure, high-speed GPU infrastructure. You focus on your business—we take care of the AI.
+            We help businesses build and run custom AI models tailored to their needs, using their own data on secure, high-speed GPU infrastructure. You focus on your business—we take care of the AI.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -130,8 +128,6 @@ const HeroSection = () => {
           </div>
         </div>
 
-        </div>
-
         {/* Contact Us Section */}
         <div className="relative z-10 container mx-auto mt-16 sm:mt-24 px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -149,7 +145,7 @@ const HeroSection = () => {
               </Button>
             </Link>
           </div>
-
+        </div>
       </div>
     </div>
   );

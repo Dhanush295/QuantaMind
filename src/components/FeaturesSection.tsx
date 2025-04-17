@@ -1,8 +1,20 @@
 
 import React from 'react';
-import { Cpu, Database, Lock, Zap, Plug, ChartBar } from 'lucide-react';
+import { Bot, Database, Lock, Zap, Plug, ChartBar, Brain, Cpu } from 'lucide-react';
 
 const features = [
+  {
+    title: "Custom AI Agents",
+    description: "Build specialized AI agents tailored to your business processes and requirements.",
+    icon: Bot,
+    color: "text-quantminds-purple"
+  },
+  {
+    title: "Custom LLM AI Agents",
+    description: "Develop and deploy custom Language Learning Models designed specifically for your business needs.",
+    icon: Brain,
+    color: "text-quantminds-blue"
+  },
   {
     title: "Blazing-Fast GPU Training",
     description: "Built with CUDA, cuDNN & cuBLAS for maximum performance on GPU infrastructure.",
@@ -16,27 +28,15 @@ const features = [
     color: "text-quantminds-blue"
   },
   {
-    title: "Flexible API Integration",
-    description: "Works seamlessly with REST, FastAPI, Spring Boot or any backend of your choice.",
-    icon: Plug,
-    color: "text-quantminds-purple"
-  },
-  {
-    title: "Live Predictions",
-    description: "Get real-time insights and recommendations through our high-performance API.",
-    icon: ChartBar,
-    color: "text-quantminds-blue"
-  },
-  {
     title: "Your Data Stays Yours",
     description: "Full control with secure training and updates. We never see your sensitive information.",
     icon: Lock,
     color: "text-quantminds-purple"
   },
   {
-    title: "Easy Data Management",
+    title: "Easy Integration",
     description: "Simple interfaces for uploading, transforming, and managing your training datasets.",
-    icon: Database,
+    icon: Plug,
     color: "text-quantminds-blue"
   }
 ];
