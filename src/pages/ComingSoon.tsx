@@ -41,7 +41,7 @@ const ComingSoon = () => {
         <div className="text-muted-foreground">
           <p>Have questions? Reach out to us at:</p>
           <a href="mailto:dg1@toromail.csudh.edu" className="text-quantminds-purple hover:underline">
-            dg1@toromail.csudh.edu
+            info@quantamind.co
           </a>
         </div>
       </div>
