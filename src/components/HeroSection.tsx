@@ -30,7 +30,7 @@ const HeroSection = () => {
            </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8">
-            Build your own AI Agent using our in-house powerful infrastructure.
+            Build your own AI Agent using cloud-native modular infrastructure.
           </p>
 
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8">
