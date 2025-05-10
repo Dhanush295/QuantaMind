@@ -7,6 +7,7 @@ import UseCasesSection from '@/components/UseCasesSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import CTASection from '@/components/CTASection';
 import ContactSection from '@/components/ContactSection';
+import ChatBot from '@/components/ChatBot';
 
 const Index = () => {
   return (
@@ -36,6 +37,9 @@ const Index = () => {
       </main>
       
       <Footer />
+      
+      {/* Floating ChatBot */}
+      <ChatBot />
     </div>
   );
 };
