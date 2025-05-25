@@ -127,5 +127,5 @@ const Contact = () => {
     </div>
   );
 };
-
+// updated email to recieve the form data
 export default Contact;
