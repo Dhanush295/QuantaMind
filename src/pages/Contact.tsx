@@ -1,148 +1,127 @@
-
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/components/ui/use-toast";
-import { Mail, Send } from 'lucide-react';
+import { Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // In a real application, you would send this data to a server
-    // For now, we'll just simulate a successful submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
+
+    try {
+      const formData = new FormData(formRef.current!);
+
+      const res = await fetch("https://formsubmit.co/ajax/dhanushg295@gmail.com", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+        },
+        body: formData,
       });
-      
-      // Reset form
-      setName('');
-      setEmail('');
-      setMessage('');
-      setIsSubmitting(false);
-    }, 1000);
+
+      if (res.ok) {
+        toast({
+          title: "Thanks for using QuantaMind!",
+          description: "We will get back to you soon.",
+        });
+        formRef.current?.reset();
+      } else {
+        toast({
+          title: "Submission failed",
+          description: "Something went wrong. Please try again.",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Network error",
+        description: "Unable to submit the form. Please try again later.",
+      });
+    }
+
+    setIsSubmitting(false);
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      {/* Background with gradient */}
-      <div className="absolute inset-0 bg-gradient-radial from-quantminds-purple/20 via-transparent to-transparent -z-10"></div>
-      
-      {/* Main content */}
-      <div className="container mx-auto pt-24 pb-16 px-4">
-        <div className="max-w-3xl mx-auto">
-          <div className="mb-8 text-center">
-            <a href="/" className="text-4xl font-bold flex items-center gap-2 justify-center mb-4">
-              <span className="text-white rounded-md bg-quantminds-purple/90 px-2">Q</span>
-              <span className="text-gradient">QuantaMind</span>
-            </a>
+    <div className="min-h-screen bg-background text-foreground pt-24 pb-16 px-4 container mx-auto">
+      <div className="max-w-3xl mx-auto">
+        <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">Model Inquiry Form</h1>
+
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="bg-black/20 backdrop-blur-sm rounded-lg p-6 md:p-8 space-y-6"
+        >
+          <input type="hidden" name="_cc" value="Chirag.v.k2@gmail.com,aanyasampath1703@gmail.com" />
+          <input type="hidden" name="_subject" value="New QuantaMind Inquiry" />
+          <input type="hidden" name="_template" value="table" />
+
+          <div>
+            <Label htmlFor="model">Model Selection</Label>
+            <select name="model" required className="w-full bg-background border px-3 py-2 rounded-md">
+              <option value="">Select a model</option>
+              <option value="Language model based on company data">Language model based on company data</option>
+              <option value="Company features Analytics model">Company features Analytics model</option>
+              <option value="Context based Language Model">Context based Language Model</option>
+              <option value="Image processing model">Image processing model</option>
+            </select>
           </div>
-          
-          <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">Contact Us</h1>
-          
-          <div className="bg-black/20 backdrop-blur-sm rounded-lg p-6 md:p-8 mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h2 className="text-xl font-semibold mb-4">Get in Touch</h2>
-                <p className="text-muted-foreground mb-6">
-                  Have questions about our services or want to learn more about how QuantaMind can help your business? 
-                  We'd love to hear from you!
-                </p>
-                
-                <div className="mb-6">
-                  <h3 className="font-medium mb-2">Email Us</h3>
-                  <a 
-                    href="mailto:info@quantamind.co" 
-                    className="flex items-center gap-2 text-quantminds-purple hover:underline"
-                  >
-                    <Mail className="h-4 w-4" />
-                    info@quantamind.co
-                  </a>
-                </div>
-                
-                <div>
-                  <h3 className="font-medium mb-2">Response Time</h3>
-                  <p className="text-sm text-muted-foreground">
-                    We aim to respond to all inquiries within 24-48 hours during business days.
-                  </p>
-                </div>
-              </div>
-              
-              <div>
-                <h2 className="text-xl font-semibold mb-4">Send a Message</h2>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <Label htmlFor="name">Your Name</Label>
-                    <Input 
-                      id="name" 
-                      value={name} 
-                      onChange={(e) => setName(e.target.value)} 
-                      required 
-                      placeholder="John Doe"
-                    />
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="email">Email Address</Label>
-                    <Input 
-                      id="email" 
-                      type="email" 
-                      value={email} 
-                      onChange={(e) => setEmail(e.target.value)} 
-                      required 
-                      placeholder="your@email.com"
-                    />
-                  </div>
-                  
-                  <div>
-                    <Label htmlFor="message">Message</Label>
-                    <Textarea 
-                      id="message" 
-                      value={message} 
-                      onChange={(e) => setMessage(e.target.value)} 
-                      required 
-                      placeholder="How can we help you?"
-                      className="min-h-[120px]"
-                    />
-                  </div>
-                  
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-quantminds-purple hover:bg-quantminds-purple/90" 
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? (
-                      <span className="flex items-center gap-2">Sending...</span>
-                    ) : (
-                      <span className="flex items-center gap-2">
-                        <Send className="h-4 w-4" /> Send Message
-                      </span>
-                    )}
-                  </Button>
-                </form>
-              </div>
-            </div>
+
+          <div>
+            <Label htmlFor="deployment">Deployment</Label>
+            <select name="deployment" required className="w-full bg-background border px-3 py-2 rounded-md">
+              <option value="">Select deployment</option>
+              <option value="Ready API - QuantaMind">Ready API - QuantaMind</option>
+              <option value="Internal Deployment">Internal Deployment</option>
+            </select>
           </div>
-          
-          <div className="text-center">
-            <Link to="/">
-              <Button variant="outline">
-                Back to Homepage
-              </Button>
-            </Link>
+
+          <div>
+            <Label htmlFor="description">Description</Label>
+            <Textarea
+              name="description"
+              required
+              placeholder="Describe your business needs..."
+              className="min-h-[120px]"
+            />
           </div>
+
+          <div>
+            <Label htmlFor="email">Email</Label>
+            <Input
+              name="email"
+              type="email"
+              required
+              placeholder="your@email.com"
+            />
+          </div>
+
+          <Button
+            type="submit"
+            className="w-full bg-quantminds-purple hover:bg-quantminds-purple/90"
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? (
+              <span className="flex items-center gap-2">Sending...</span>
+            ) : (
+              <span className="flex items-center gap-2">
+                <Send className="h-4 w-4" /> Submit Inquiry
+              </span>
+            )}
+          </Button>
+        </form>
+
+        <div className="text-center mt-8">
+          <Link to="/">
+            <Button variant="outline">Back to Homepage</Button>
+          </Link>
         </div>
       </div>
     </div>
