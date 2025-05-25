@@ -1,11 +1,12 @@
+
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import {
-  Film,
-  ShoppingCart,
-  TrendingUp,
-  HeartPulse,
-  Target,
+  MessageCircle,
+  Stethoscope,
+  Gauge,
+  UserCheck,
+  Tv,
   Webhook,
   FileDown,
   CloudCog,
@@ -15,37 +16,37 @@ import {
 
 const useCases = [
   {
-    title: "Movie & Product Recommendations",
-    description: "Drive more sales with personalized recommendations based on user behavior.",
-    icon: Film,
+    title: "Custom AI Chatbots for Businesses",
+    description: "Quantamind helps startups and SMBs build private chatbots trained on their own data, running securely on their infrastructure.",
+    icon: MessageCircle,
     color: "bg-quantminds-purple/20",
     iconColor: "text-quantminds-purple"
   },
   {
-    title: "Trading Predictions",
-    description: "Make data-driven trading decisions with AI-powered signal detection and forecasting.",
-    icon: TrendingUp,
+    title: "Medical AI on Edge Devices",
+    description: "Hospitals use Quantamind to deploy diagnostic models (e.g., ECG, imaging) offline on tablets or servers to meet HIPAA compliance.",
+    icon: Stethoscope,
     color: "bg-quantminds-blue/20",
     iconColor: "text-quantminds-blue"
   },
   {
-    title: "Healthcare Insights",
-    description: "Identify patterns in healthcare data to improve patient outcomes and care efficiency.",
-    icon: HeartPulse,
+    title: "Industrial Predictive Maintenance",
+    description: "Manufacturers run Quantamind's AI models on edge devices to detect equipment faults and avoid downtime in real time.",
+    icon: Gauge,
     color: "bg-quantminds-purple/20",
     iconColor: "text-quantminds-purple"
   },
   {
-    title: "Personalized Ads",
-    description: "Target the right audience with AI that understands customer preferences.",
-    icon: Target,
+    title: "Offline AI Copilots for Enterprises",
+    description: "Banks and legal firms deploy AI agents internally to summarize, classify, or search documents without using any cloud service.",
+    icon: UserCheck,
     color: "bg-quantminds-blue/20",
     iconColor: "text-quantminds-blue"
   },
   {
-    title: "Customer Behavior Analytics",
-    description: "Understand your customers better with deep behavior pattern analysis.",
-    icon: ShoppingCart,
+    title: "AI in Consumer Electronics",
+    description: "Device makers integrate Quantamind's lightweight models into smart TVs, wearables, and routers for fast, private AI features.",
+    icon: Tv,
     color: "bg-quantminds-purple/20",
     iconColor: "text-quantminds-purple"
   }
