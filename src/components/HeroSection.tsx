@@ -38,12 +38,7 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Link to="/coming-soon">
-              <Button size="lg" className="font-medium gap-2 bg-quantminds-purple hover:bg-quantminds-purple/90">
-                Get Early Access <ArrowRight size={16} />
-              </Button>
-            </Link>
-            <Link to="/coming-soon">
+            <Link to="/contact">
               <Button variant="outline" size="lg" className="font-medium">
                 Schedule a Demo
               </Button>

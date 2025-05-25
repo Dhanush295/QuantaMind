@@ -21,14 +21,9 @@ const CTASection = () => {
                 Join the QuantaMind early access program and get ahead of the competition with AI-powered insights.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/coming-soon">
+                <Link to="/contact">
                   <Button size="lg" className="font-medium gap-2 bg-quantminds-purple hover:bg-quantminds-purple/90">
                     Get Started <ArrowRight size={16} />
-                  </Button>
-                </Link>
-                <Link to="/coming-soon">
-                  <Button variant="outline" size="lg" className="font-medium">
-                    Contact Sales
                   </Button>
                 </Link>
               </div>

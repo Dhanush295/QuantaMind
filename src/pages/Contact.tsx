@@ -29,9 +29,9 @@ const Contact = () => {
 
       if (res.ok) {
         toast({
-          title: "Thanks for using QuantaMind!",
-          description: "We will get back to you soon.",
-        });
+        title: "Thank you!",
+        description: "Thanks for choosing QuantaMind for doing business with us. We will get back to you soon!",
+      });
         formRef.current?.reset();
       } else {
         toast({
