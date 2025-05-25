@@ -78,8 +78,9 @@ const Contact = () => {
             <Label htmlFor="deployment">Deployment</Label>
             <select name="deployment" required className="w-full bg-background border px-3 py-2 rounded-md">
               <option value="">Select deployment</option>
-              <option value="Ready API - QuantaMind">Ready API - QuantaMind</option>
-              <option value="Internal Deployment">Internal Deployment</option>
+              <option value="Ready API - QuantaMind">Ready API - QuantaMind Infrastructure</option>
+              <option value="Internal Deployment">Internal Deployment - Your cloud Infrastructure </option>
+              <option value="Internal Deployment">On-Prem Deployment - Your Infrastructure </option>
             </select>
           </div>
 
