@@ -5,12 +5,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/components/ui/use-toast";
 import { Send } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,25 +22,20 @@ const Contact = () => {
 
       const res = await fetch("https://formsubmit.co/ajax/dhanushg295@gmail.com", {
         method: "POST",
-        headers: {
-          Accept: "application/json",
-        },
+        headers: { Accept: "application/json" },
         body: formData,
       });
 
       if (res.ok) {
-        toast({
-        title: "Thank you!",
-        description: "Thanks for choosing QuantaMind for doing business with us. We will get back to you soon!",
-      });
         formRef.current?.reset();
+        navigate("/thank-you");
       } else {
         toast({
           title: "Submission failed",
           description: "Something went wrong. Please try again.",
         });
       }
-    } catch (error) {
+    } catch {
       toast({
         title: "Network error",
         description: "Unable to submit the form. Please try again later.",
@@ -64,6 +60,11 @@ const Contact = () => {
           <input type="hidden" name="_template" value="table" />
 
           <div>
+            <Label htmlFor="company">Company Name</Label>
+            <Input name="company" type="text" required placeholder="Your company name" />
+          </div>
+
+          <div>
             <Label htmlFor="model">Model Selection</Label>
             <select name="model" required className="w-full bg-background border px-3 py-2 rounded-md">
               <option value="">Select a model</option>
@@ -79,8 +80,8 @@ const Contact = () => {
             <select name="deployment" required className="w-full bg-background border px-3 py-2 rounded-md">
               <option value="">Select deployment</option>
               <option value="Ready API - QuantaMind">Ready API - QuantaMind Infrastructure</option>
-              <option value="Internal Deployment">Internal Deployment - Your cloud Infrastructure </option>
-              <option value="Internal Deployment">On-Prem Deployment - Your Infrastructure </option>
+              <option value="Internal Deployment">Internal Deployment - Your cloud Infrastructure</option>
+              <option value="On-Prem Deployment">On-Prem Deployment - Your Infrastructure</option>
             </select>
           </div>
 
@@ -96,12 +97,7 @@ const Contact = () => {
 
           <div>
             <Label htmlFor="email">Email</Label>
-            <Input
-              name="email"
-              type="email"
-              required
-              placeholder="your@email.com"
-            />
+            <Input name="email" type="email" required placeholder="your@email.com" />
           </div>
 
           <Button
@@ -128,5 +124,5 @@ const Contact = () => {
     </div>
   );
 };
-// updated email to recieve the form data
+
 export default Contact;
