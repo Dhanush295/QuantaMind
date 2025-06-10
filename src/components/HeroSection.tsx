@@ -40,7 +40,7 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Link to="/contact">
               <Button variant="outline" size="lg" className="font-medium">
-                Schedule a Demo
+                Join our Waitlist
               </Button>
             </Link>
           </div>
