@@ -3,6 +3,7 @@ import React from 'react';
 import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
@@ -22,13 +23,26 @@ const Footer = () => {
               <Link to="/contact" className="text-gray-400 hover:text-quantminds-purple transition">
                 <Github size={20} />
               </Link>
-              <Link to="/contact" className="text-gray-400 hover:text-quantminds-purple transition">
+              <a
+                href="https://x.com/QuantaMind_"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-quantminds-purple transition"
+              >
                 <Twitter size={20} />
-              </Link>
-              <Link to="/contact" className="text-gray-400 hover:text-quantminds-purple transition">
+              </a>
+              <a
+                href="https://www.linkedin.com/company/quantaamind"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-quantminds-purple transition"
+              >
                 <Linkedin size={20} />
-              </Link>
-              <a href="mailto:dg1@toromail.csudh.edu" className="text-gray-400 hover:text-quantminds-purple transition">
+              </a>
+              <a
+                href="mailto:info@quantamind.co"
+                className="text-gray-400 hover:text-quantminds-purple transition"
+              >
                 <Mail size={20} />
               </a>
             </div>
