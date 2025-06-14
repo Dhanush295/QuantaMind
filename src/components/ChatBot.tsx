@@ -1,3 +1,4 @@
+
 // src/components/ChatBot.tsx
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
@@ -65,26 +66,16 @@ const ChatBot: React.FC = () => {
   const scheduleMeeting = async () => {
     setIsLoading(true);
     try {
-      // const res = await fetch('/schedule-meeting', { method: 'POST' });
-      const startTime = new Date(datetime).toISOString();
-      const end = new Date(datetime);
-      end.setMinutes(end.getMinutes() + 30);
-      const endTime = end.toISOString();
-
       const res = await fetch('/schedule-meeting', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          email,
           summary: 'Free Consultation',
-          description: 'Scheduled via chat',
-          startTime,
-          endTime
+          description: 'Scheduled via chat'
         })
       });
 
       const data = await res.json();
-
 
       if (!res.ok) {
         throw new Error(data.error || 'Server error');
