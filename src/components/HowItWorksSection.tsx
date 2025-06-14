@@ -23,7 +23,7 @@ const steps = [
     title: "Deploy Anywhere — On-Prem, Cloud, or Edge",
     description: "We deliver your agent in your preferred environment: cloud, local servers, or even low-power IoT devices.",
     icon: Shield,
-    color: "text-green-400",
+    color: "text-quantminds-purple",
     compliance: "HIPAA/GDPR/FDA compliant by design.",
     badge: "Secure Deployment"
   },
@@ -31,7 +31,7 @@ const steps = [
     title: "Integrate & Scale with Support",
     description: "Get predictions via secure local API or CLI. We offer ongoing support, updates, and a self-serve portal launching soon.",
     icon: Zap,
-    color: "text-quantminds-purple",
+    color: "text-quantminds-blue",
     plans: "SaaS subscription or SDK licensing — flexible plans available.",
     badge: "Enterprise Support"
   }
@@ -56,7 +56,7 @@ const HowItWorksSection = () => {
         
         <div className="relative">
           {/* Timeline line */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-quantminds-purple via-quantminds-blue to-green-400 transform -translate-x-1/2 z-0 opacity-30"></div>
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-quantminds-purple via-quantminds-blue to-quantminds-purple transform -translate-x-1/2 z-0 opacity-30"></div>
           
           {/* Steps */}
           <div className="space-y-20 md:space-y-0 relative z-10">
@@ -91,10 +91,10 @@ const HowItWorksSection = () => {
                   )}
                   
                   {step.compliance && (
-                    <div className="bg-green-500/10 border border-green-500/30 p-3 rounded-lg">
+                    <div className="bg-quantminds-blue/10 border border-quantminds-blue/30 p-3 rounded-lg">
                       <div className="flex items-center gap-2">
-                        <Lock className="h-4 w-4 text-green-400" />
-                        <span className="text-sm font-medium text-green-400">{step.compliance}</span>
+                        <Lock className="h-4 w-4 text-quantminds-blue" />
+                        <span className="text-sm font-medium text-quantminds-blue">{step.compliance}</span>
                       </div>
                     </div>
                   )}
@@ -109,7 +109,7 @@ const HowItWorksSection = () => {
                   )}
                 </div>
                 
-                <div className="hidden md:flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-black/40 to-black/20 border-2 border-gradient-to-r from-quantminds-purple via-quantminds-blue to-green-400 relative z-20 shadow-2xl">
+                <div className="hidden md:flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-black/40 to-black/20 border-2 border-gradient-to-r from-quantminds-purple via-quantminds-blue to-quantminds-purple relative z-20 shadow-2xl">
                   <div className="w-16 h-16 rounded-full bg-black/60 flex items-center justify-center">
                     <step.icon className={`${step.color} h-7 w-7`} />
                   </div>
@@ -146,8 +146,8 @@ const HowItWorksSection = () => {
                               <div className="w-2 h-2 bg-quantminds-blue rounded-full"></div>
                               <span className="text-xs text-muted-foreground">Current process: Manual review (4-6 hours)</span>
                             </div>
-                            <div className="flex items-center gap-3 p-2 bg-green-500/10 rounded">
-                              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                            <div className="flex items-center gap-3 p-2 bg-quantminds-purple/10 rounded">
+                              <div className="w-2 h-2 bg-quantminds-purple rounded-full"></div>
                               <span className="text-xs text-muted-foreground">Target: Automated clause extraction</span>
                             </div>
                           </div>
@@ -165,7 +165,7 @@ const HowItWorksSection = () => {
                           <div className="space-y-3">
                             <div className="flex justify-between items-center">
                               <span className="text-xs text-muted-foreground">Fine-tuning Progress</span>
-                              <span className="text-xs text-green-400">87% Complete</span>
+                              <span className="text-xs text-quantminds-blue">87% Complete</span>
                             </div>
                             <div className="w-full bg-gray-700 rounded-full h-2">
                               <div className="bg-gradient-to-r from-quantminds-purple to-quantminds-blue h-2 rounded-full" style={{width: '87%'}}></div>
@@ -175,8 +175,8 @@ const HowItWorksSection = () => {
                                 <div className="text-lg font-bold text-quantminds-purple">2x</div>
                                 <div className="text-xs text-muted-foreground">Faster Inference</div>
                               </div>
-                              <div className="text-center p-2 bg-green-500/20 rounded">
-                                <div className="text-lg font-bold text-green-400">C++</div>
+                              <div className="text-center p-2 bg-quantminds-blue/20 rounded">
+                                <div className="text-lg font-bold text-quantminds-blue">C++</div>
                                 <div className="text-xs text-muted-foreground">Backend</div>
                               </div>
                             </div>
@@ -189,8 +189,8 @@ const HowItWorksSection = () => {
                       <div className="space-y-4">
                         <div className="bg-black/60 rounded-lg p-4 border border-gray-700">
                           <div className="flex items-center gap-2 mb-3">
-                            <Shield className="h-5 w-5 text-green-400" />
-                            <span className="text-sm font-medium text-green-400">Deployment Options</span>
+                            <Shield className="h-5 w-5 text-quantminds-purple" />
+                            <span className="text-sm font-medium text-quantminds-purple">Deployment Options</span>
                           </div>
                           <div className="grid grid-cols-3 gap-2">
                             <div className="text-center p-3 bg-quantminds-purple/20 rounded border border-quantminds-purple/30">
@@ -201,15 +201,15 @@ const HowItWorksSection = () => {
                               <Server className="h-6 w-6 text-quantminds-blue mx-auto mb-1" />
                               <div className="text-xs font-medium">On-Prem</div>
                             </div>
-                            <div className="text-center p-3 bg-green-500/20 rounded border border-green-500/30">
-                              <Cpu className="h-6 w-6 text-green-400 mx-auto mb-1" />
+                            <div className="text-center p-3 bg-quantminds-purple/20 rounded border border-quantminds-purple/30">
+                              <Cpu className="h-6 w-6 text-quantminds-purple mx-auto mb-1" />
                               <div className="text-xs font-medium">Edge</div>
                             </div>
                           </div>
-                          <div className="mt-3 p-2 bg-green-500/10 rounded border border-green-500/30">
+                          <div className="mt-3 p-2 bg-quantminds-blue/10 rounded border border-quantminds-blue/30">
                             <div className="flex items-center gap-2">
-                              <Lock className="h-4 w-4 text-green-400" />
-                              <span className="text-xs text-green-400 font-medium">HIPAA/GDPR/FDA Compliant</span>
+                              <Lock className="h-4 w-4 text-quantminds-blue" />
+                              <span className="text-xs text-quantminds-blue font-medium">HIPAA/GDPR/FDA Compliant</span>
                             </div>
                           </div>
                         </div>
@@ -225,7 +225,7 @@ const HowItWorksSection = () => {
                           </div>
                           <div className="space-y-3">
                             <div className="p-2 bg-quantminds-purple/10 rounded border border-quantminds-purple/30">
-                              <div className="text-xs font-mono text-green-400">
+                              <div className="text-xs font-mono text-quantminds-blue">
                                 <span className="text-quantminds-purple">POST</span> /api/v1/analyze
                               </div>
                               <div className="text-xs text-muted-foreground mt-1">Local secure endpoint</div>
@@ -235,8 +235,8 @@ const HowItWorksSection = () => {
                                 <div className="text-sm font-bold text-quantminds-blue">SaaS</div>
                                 <div className="text-xs text-muted-foreground">Subscription</div>
                               </div>
-                              <div className="text-center p-2 bg-green-500/20 rounded">
-                                <div className="text-sm font-bold text-green-400">SDK</div>
+                              <div className="text-center p-2 bg-quantminds-purple/20 rounded">
+                                <div className="text-sm font-bold text-quantminds-purple">SDK</div>
                                 <div className="text-xs text-muted-foreground">Licensing</div>
                               </div>
                             </div>
@@ -258,9 +258,9 @@ const HowItWorksSection = () => {
             Join enterprise leaders who are already transforming their operations with custom, secure AI agents designed for their specific workflows.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <div className="flex items-center gap-2 bg-green-500/20 border border-green-500/30 px-4 py-2 rounded-full">
-              <CheckCircle className="h-4 w-4 text-green-400" />
-              <span className="text-sm text-green-400 font-medium">HIPAA/GDPR Compliant</span>
+            <div className="flex items-center gap-2 bg-quantminds-blue/20 border border-quantminds-blue/30 px-4 py-2 rounded-full">
+              <CheckCircle className="h-4 w-4 text-quantminds-blue" />
+              <span className="text-sm text-quantminds-blue font-medium">HIPAA/GDPR Compliant</span>
             </div>
             <div className="flex items-center gap-2 bg-quantminds-purple/20 border border-quantminds-purple/30 px-4 py-2 rounded-full">
               <Shield className="h-4 w-4 text-quantminds-purple" />
