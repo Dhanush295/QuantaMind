@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
@@ -15,10 +16,10 @@ const CTASection = () => {
             {/* Left Text Content */}
             <div className="w-full lg:w-1/2">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-                Ready to transform your business with <span className="text-gradient">custom AI models</span>?
+                Ready for <span className="text-gradient">custom AI</span>?
               </h2>
               <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8">
-                Join the QuantaMind early access program and get ahead of the competition with AI-powered insights.
+                Join early access and get ahead with AI-powered insights.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact">
@@ -38,7 +39,7 @@ const CTASection = () => {
                   <div>
                     <div className="font-bold text-4xl sm:text-5xl mb-2 text-gradient">97%</div>
                     <p className="text-sm text-muted-foreground">
-                      of early users report improved business insights within 30 days
+                      improved insights in 30 days
                     </p>
                   </div>
                 </div>

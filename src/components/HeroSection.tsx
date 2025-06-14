@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Cpu, Database, Zap } from 'lucide-react';
@@ -30,17 +31,13 @@ const HeroSection = () => {
            </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8">
-            Build your own AI Agent using cloud-native modular infrastructure.
-          </p>
-
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8">
-            We help businesses build and run custom AI models tailored to their needs, using their own data on secure, high-speed GPU infrastructure. You focus on your business—we take care of the AI.
+            Custom AI agents trained on your data. Deploy anywhere—cloud, servers, or devices. Secure, fast, and compliant.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Link to="/contact">
               <Button variant="outline" size="lg" className="font-medium">
-                Join our Waitlist
+                Join Waitlist
               </Button>
             </Link>
           </div>
@@ -48,15 +45,15 @@ const HeroSection = () => {
           <div className="mt-10 sm:mt-12 flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-4">
             <div className="flex items-center gap-2">
               <Zap size={20} className="text-quantminds-purple" />
-              <span className="text-sm text-muted-foreground">CUDA Optimized</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Cpu size={20} className="text-quantminds-purple" />
-              <span className="text-sm text-muted-foreground">GPU Accelerated</span>
+              <span className="text-sm text-muted-foreground">GPU Optimized</span>
             </div>
             <div className="flex items-center gap-2">
               <Database size={20} className="text-quantminds-purple" />
-              <span className="text-sm text-muted-foreground">Your Data, Your Models</span>
+              <span className="text-sm text-muted-foreground">Your Data</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Cpu size={20} className="text-quantminds-purple" />
+              <span className="text-sm text-muted-foreground">Secure</span>
             </div>
           </div>
         </div>
