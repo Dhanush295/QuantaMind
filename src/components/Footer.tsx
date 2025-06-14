@@ -3,7 +3,6 @@ import React from 'react';
 import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
@@ -51,9 +50,9 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition">About</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition">Careers</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition">Blog</Link></li>
+              <li><Link to="/about" className="text-gray-400 hover:text-white transition">About</Link></li>
+              <li><Link to="/careers" className="text-gray-400 hover:text-white transition">Careers</Link></li>
+              <li><Link to="/blog" className="text-gray-400 hover:text-white transition">Blog</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-white transition">Contact</Link></li>
             </ul>
           </div>
@@ -61,20 +60,20 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Product</h3>
             <ul className="space-y-2">
-              <li><a href="#features" className="text-gray-400 hover:text-white transition">Features</a></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition">Pricing</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition">Documentation</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition">API Reference</Link></li>
+              <li><Link to="/features" className="text-gray-400 hover:text-white transition">Features</Link></li>
+              <li><Link to="/pricing" className="text-gray-400 hover:text-white transition">Pricing</Link></li>
+              <li><Link to="/documentation" className="text-gray-400 hover:text-white transition">Documentation</Link></li>
+              <li><Link to="/api-reference" className="text-gray-400 hover:text-white transition">API Reference</Link></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-white font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition">Privacy Policy</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition">Terms of Service</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition">Cookie Policy</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition">Security</Link></li>
+              <li><Link to="/privacy-policy" className="text-gray-400 hover:text-white transition">Privacy Policy</Link></li>
+              <li><Link to="/terms-of-service" className="text-gray-400 hover:text-white transition">Terms of Service</Link></li>
+              <li><Link to="/cookie-policy" className="text-gray-400 hover:text-white transition">Cookie Policy</Link></li>
+              <li><Link to="/security" className="text-gray-400 hover:text-white transition">Security</Link></li>
             </ul>
           </div>
         </div>
