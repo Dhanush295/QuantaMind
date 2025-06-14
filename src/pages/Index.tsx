@@ -17,6 +17,11 @@ const Index = () => {
       <main className="flex-grow">
         <HeroSection />
         
+        {/* Founding Pilot Program - Moved to prominent position right after hero */}
+        <section id="founding-pilot" className="relative">
+          <FoundingPilotSection />
+        </section>
+        
         <section id="features">
           <FeaturesSection />
         </section>
@@ -27,10 +32,6 @@ const Index = () => {
         
         <section id="howitworks">
           <HowItWorksSection />
-        </section>
-        
-        <section id="founding-pilot">
-          <FoundingPilotSection />
         </section>
         
         <CTASection />
