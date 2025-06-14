@@ -1,101 +1,274 @@
 
 import React from 'react';
-import { Search, Settings, Rocket, RefreshCw, Shield, CheckCircle, Lock, Award } from 'lucide-react';
+import { Brain, Settings, Shield, Zap, FileText, MessageSquare, Database, CheckCircle, Lock, Server, Cloud, Cpu } from 'lucide-react';
 
 const steps = [
   {
-    title: "Analyze Your Workflow",
-    description: "We study your processes — contracts, diagnostics, onboarding — to understand your needs.",
-    icon: Search,
+    title: "Understand Your Workflow",
+    description: "We begin by mapping your internal process through interviews and sample data. Whether it's document review, diagnostics, or onboarding — we build from your real needs.",
+    icon: Brain,
     color: "text-quantminds-purple",
-    badge: "Step 1"
+    example: "Contract review process with clause tagging & extraction.",
+    badge: "Discovery Phase"
   },
   {
-    title: "Build Custom AI Agent",
-    description: "Fine-tuned models wrapped in a high-performance engine that runs offline.",
+    title: "Design & Customize Your Agent",
+    description: "We fine-tune open-source models and wrap them in our C++-based backend for 2x faster inference. Your agent is optimized for speed, privacy, and compliance.",
     icon: Settings,
     color: "text-quantminds-blue",
-    badge: "Step 2"
+    features: ["Air-gapped deployment? No problem.", "Need white-labeling? Included."],
+    badge: "Model Engineering"
   },
   {
-    title: "Deploy Anywhere",
-    description: "Local servers, private cloud, or lightweight devices — even without internet.",
-    icon: Rocket,
+    title: "Deploy Anywhere — On-Prem, Cloud, or Edge",
+    description: "We deliver your agent in your preferred environment: cloud, local servers, or even low-power IoT devices.",
+    icon: Shield,
     color: "text-quantminds-purple",
-    badge: "Step 3"
+    compliance: "HIPAA/GDPR/FDA compliant by design.",
+    badge: "Secure Deployment"
   },
   {
-    title: "Integrate & Scale",
-    description: "Simple API access with ongoing support and optional SaaS dashboards.",
-    icon: RefreshCw,
+    title: "Integrate & Scale with Support",
+    description: "Get predictions via secure local API or CLI. We offer ongoing support, updates, and a self-serve portal launching soon.",
+    icon: Zap,
     color: "text-quantminds-blue",
-    badge: "Step 4"
+    plans: "SaaS subscription or SDK licensing — flexible plans available.",
+    badge: "Enterprise Support"
   }
 ];
 
 const HowItWorksSection = () => {
   return (
-    <div className="py-16 px-4 bg-black/20 relative">
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3">
-            How Quantamind Works
+    <div className="py-20 px-4 bg-black/30 relative">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 bg-quantminds-purple/20 text-quantminds-purple border border-quantminds-purple/30 px-6 py-3 rounded-full mb-6">
+            <Brain className="h-5 w-5" />
+            <span className="font-bold text-sm">HOW QUANTAMIND WORKS</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Get started with your own secure, private AI agent in 4 simple steps
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Launch your secure, private AI agent in 4 simple steps.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            From understanding your workflow to deploying enterprise-grade AI agents that work seamlessly in your environment
           </p>
         </div>
         
-        <div className="space-y-12">
-          {steps.map((step, index) => (
-            <div key={index} className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-6 lg:gap-12 items-center`}>
-              <div className="flex-shrink-0">
-                <div className="flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-black/60 to-black/40 border border-white/20">
-                  <step.icon className={`${step.color} h-10 w-10`} />
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-quantminds-purple via-quantminds-blue to-quantminds-purple transform -translate-x-1/2 z-0 opacity-30"></div>
+          
+          {/* Steps */}
+          <div className="space-y-20 md:space-y-0 relative z-10">
+            {steps.map((step, index) => (
+              <div key={index} className="md:flex items-center justify-center">
+                <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12 md:order-2'}`}>
+                  <div className="inline-flex items-center gap-2 bg-black/40 border border-gray-700 px-3 py-1 rounded-full mb-4 text-sm font-medium text-muted-foreground">
+                    {step.badge}
+                  </div>
+                  <h3 className="text-2xl font-semibold mb-3">{step.title}</h3>
+                  <p className="text-muted-foreground mb-4">{step.description}</p>
+                  
+                  {step.example && (
+                    <div className="bg-quantminds-purple/10 border border-quantminds-purple/30 p-3 rounded-lg mb-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <FileText className="h-4 w-4 text-quantminds-purple" />
+                        <span className="text-sm font-medium text-quantminds-purple">Example Use Case</span>
+                      </div>
+                      <p className="text-sm text-muted-foreground italic">"{step.example}"</p>
+                    </div>
+                  )}
+                  
+                  {step.features && (
+                    <div className="space-y-2">
+                      {step.features.map((feature, i) => (
+                        <div key={i} className="flex items-center gap-2">
+                          <CheckCircle className="h-4 w-4 text-quantminds-blue" />
+                          <span className="text-sm text-muted-foreground">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  
+                  {step.compliance && (
+                    <div className="bg-quantminds-blue/10 border border-quantminds-blue/30 p-3 rounded-lg">
+                      <div className="flex items-center gap-2">
+                        <Lock className="h-4 w-4 text-quantminds-blue" />
+                        <span className="text-sm font-medium text-quantminds-blue">{step.compliance}</span>
+                      </div>
+                    </div>
+                  )}
+                  
+                  {step.plans && (
+                    <div className="bg-quantminds-purple/10 border border-quantminds-purple/30 p-3 rounded-lg">
+                      <div className="flex items-center gap-2">
+                        <Settings className="h-4 w-4 text-quantminds-purple" />
+                        <span className="text-sm font-medium text-quantminds-purple">{step.plans}</span>
+                      </div>
+                    </div>
+                  )}
+                </div>
+                
+                <div className="hidden md:flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-black/40 to-black/20 border-2 border-gradient-to-r from-quantminds-purple via-quantminds-blue to-quantminds-purple relative z-20 shadow-2xl">
+                  <div className="w-16 h-16 rounded-full bg-black/60 flex items-center justify-center">
+                    <step.icon className={`${step.color} h-7 w-7`} />
+                  </div>
+                  <div className="absolute -top-2 -right-2 bg-quantminds-purple text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">
+                    {index + 1}
+                  </div>
+                </div>
+                
+                <div className={`md:w-1/2 ${index % 2 === 0 ? 'md:pl-12 md:order-2' : 'md:pr-12'}`}>
+                  <div className="md:hidden flex items-center space-x-4 mb-4">
+                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-black/40 border border-quantminds-purple/50 relative">
+                      <step.icon className={`${step.color} h-5 w-5`} />
+                      <div className="absolute -top-1 -right-1 bg-quantminds-purple text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">
+                        {index + 1}
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-semibold">{step.title}</h3>
+                  </div>
+                  
+                  <div className="glassmorphism p-6 rounded-xl transform transition-transform duration-300 hover:scale-105 border border-white/10">
+                    {index === 0 && (
+                      <div className="space-y-4">
+                        <div className="bg-black/60 rounded-lg p-4 border border-gray-700">
+                          <div className="flex items-center gap-2 mb-3">
+                            <MessageSquare className="h-5 w-5 text-quantminds-purple" />
+                            <span className="text-sm font-medium text-quantminds-purple">Workflow Interview Dashboard</span>
+                          </div>
+                          <div className="space-y-2">
+                            <div className="flex items-center gap-3 p-2 bg-quantminds-purple/10 rounded">
+                              <div className="w-2 h-2 bg-quantminds-purple rounded-full"></div>
+                              <span className="text-xs text-muted-foreground">Document types: Contracts, Legal briefs</span>
+                            </div>
+                            <div className="flex items-center gap-3 p-2 bg-quantminds-blue/10 rounded">
+                              <div className="w-2 h-2 bg-quantminds-blue rounded-full"></div>
+                              <span className="text-xs text-muted-foreground">Current process: Manual review (4-6 hours)</span>
+                            </div>
+                            <div className="flex items-center gap-3 p-2 bg-quantminds-purple/10 rounded">
+                              <div className="w-2 h-2 bg-quantminds-purple rounded-full"></div>
+                              <span className="text-xs text-muted-foreground">Target: Automated clause extraction</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                    
+                    {index === 1 && (
+                      <div className="space-y-4">
+                        <div className="bg-black/60 rounded-lg p-4 border border-gray-700">
+                          <div className="flex items-center gap-2 mb-3">
+                            <Cpu className="h-5 w-5 text-quantminds-blue" />
+                            <span className="text-sm font-medium text-quantminds-blue">Model Customization Console</span>
+                          </div>
+                          <div className="space-y-3">
+                            <div className="flex justify-between items-center">
+                              <span className="text-xs text-muted-foreground">Fine-tuning Progress</span>
+                              <span className="text-xs text-quantminds-blue">87% Complete</span>
+                            </div>
+                            <div className="w-full bg-gray-700 rounded-full h-2">
+                              <div className="bg-gradient-to-r from-quantminds-purple to-quantminds-blue h-2 rounded-full" style={{width: '87%'}}></div>
+                            </div>
+                            <div className="grid grid-cols-2 gap-2 mt-3">
+                              <div className="text-center p-2 bg-quantminds-purple/20 rounded">
+                                <div className="text-lg font-bold text-quantminds-purple">2x</div>
+                                <div className="text-xs text-muted-foreground">Faster Inference</div>
+                              </div>
+                              <div className="text-center p-2 bg-quantminds-blue/20 rounded">
+                                <div className="text-lg font-bold text-quantminds-blue">C++</div>
+                                <div className="text-xs text-muted-foreground">Backend</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                    
+                    {index === 2 && (
+                      <div className="space-y-4">
+                        <div className="bg-black/60 rounded-lg p-4 border border-gray-700">
+                          <div className="flex items-center gap-2 mb-3">
+                            <Shield className="h-5 w-5 text-quantminds-purple" />
+                            <span className="text-sm font-medium text-quantminds-purple">Deployment Options</span>
+                          </div>
+                          <div className="grid grid-cols-3 gap-2">
+                            <div className="text-center p-3 bg-quantminds-purple/20 rounded border border-quantminds-purple/30">
+                              <Cloud className="h-6 w-6 text-quantminds-purple mx-auto mb-1" />
+                              <div className="text-xs font-medium">Cloud</div>
+                            </div>
+                            <div className="text-center p-3 bg-quantminds-blue/20 rounded border border-quantminds-blue/30">
+                              <Server className="h-6 w-6 text-quantminds-blue mx-auto mb-1" />
+                              <div className="text-xs font-medium">On-Prem</div>
+                            </div>
+                            <div className="text-center p-3 bg-quantminds-purple/20 rounded border border-quantminds-purple/30">
+                              <Cpu className="h-6 w-6 text-quantminds-purple mx-auto mb-1" />
+                              <div className="text-xs font-medium">Edge</div>
+                            </div>
+                          </div>
+                          <div className="mt-3 p-2 bg-quantminds-blue/10 rounded border border-quantminds-blue/30">
+                            <div className="flex items-center gap-2">
+                              <Lock className="h-4 w-4 text-quantminds-blue" />
+                              <span className="text-xs text-quantminds-blue font-medium">HIPAA/GDPR/FDA Compliant</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                    
+                    {index === 3 && (
+                      <div className="space-y-4">
+                        <div className="bg-black/60 rounded-lg p-4 border border-gray-700">
+                          <div className="flex items-center gap-2 mb-3">
+                            <Database className="h-5 w-5 text-quantminds-purple" />
+                            <span className="text-sm font-medium text-quantminds-purple">Integration Dashboard</span>
+                          </div>
+                          <div className="space-y-3">
+                            <div className="p-2 bg-quantminds-purple/10 rounded border border-quantminds-purple/30">
+                              <div className="text-xs font-mono text-quantminds-blue">
+                                <span className="text-quantminds-purple">POST</span> /api/v1/analyze
+                              </div>
+                              <div className="text-xs text-muted-foreground mt-1">Local secure endpoint</div>
+                            </div>
+                            <div className="grid grid-cols-2 gap-2">
+                              <div className="text-center p-2 bg-quantminds-blue/20 rounded">
+                                <div className="text-sm font-bold text-quantminds-blue">SaaS</div>
+                                <div className="text-xs text-muted-foreground">Subscription</div>
+                              </div>
+                              <div className="text-center p-2 bg-quantminds-purple/20 rounded">
+                                <div className="text-sm font-bold text-quantminds-purple">SDK</div>
+                                <div className="text-xs text-muted-foreground">Licensing</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
-              
-              <div className={`flex-1 ${index % 2 === 0 ? 'lg:text-left' : 'lg:text-right'} text-center`}>
-                <div className="inline-block bg-quantminds-purple/20 text-quantminds-purple border border-quantminds-purple/30 px-3 py-1 rounded-full text-sm font-medium mb-3">
-                  {step.badge}
-                </div>
-                <h3 className="text-xl lg:text-2xl font-bold mb-3">{step.title}</h3>
-                <p className="text-muted-foreground leading-relaxed max-w-md mx-auto lg:mx-0">
-                  {step.description}
-                </p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         
-        <div className="mt-16">
-          <div className="bg-gradient-to-r from-quantminds-purple/15 to-quantminds-blue/15 border border-quantminds-purple/30 rounded-xl p-6">
-            <h3 className="text-xl font-bold text-center mb-6 flex items-center justify-center gap-2">
-              <Shield className="h-5 w-5 text-quantminds-purple" />
-              All Deployments Include
-            </h3>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div className="text-center p-3">
-                <Lock className="h-6 w-6 text-quantminds-purple mb-2 mx-auto" />
-                <h4 className="font-semibold mb-1 text-sm">End-to-end Security</h4>
-                <p className="text-xs text-muted-foreground">Complete data protection</p>
-              </div>
-              <div className="text-center p-3">
-                <CheckCircle className="h-6 w-6 text-quantminds-blue mb-2 mx-auto" />
-                <h4 className="font-semibold mb-1 text-sm">GDPR / HIPAA Compliance</h4>
-                <p className="text-xs text-muted-foreground">Regulatory compliance built-in</p>
-              </div>
-              <div className="text-center p-3">
-                <Award className="h-6 w-6 text-quantminds-purple mb-2 mx-auto" />
-                <h4 className="font-semibold mb-1 text-sm">Fully Branded Interface</h4>
-                <p className="text-xs text-muted-foreground">Your logo, your agent's name</p>
-              </div>
-              <div className="text-center p-3">
-                <Shield className="h-6 w-6 text-quantminds-blue mb-2 mx-auto" />
-                <h4 className="font-semibold mb-1 text-sm">No Vendor Lock-in</h4>
-                <p className="text-xs text-muted-foreground">No cloud dependency</p>
-              </div>
+        {/* Call to Action */}
+        <div className="text-center mt-16 bg-gradient-to-r from-quantminds-purple/15 to-quantminds-blue/15 p-8 rounded-xl border border-quantminds-purple/30 backdrop-blur-sm">
+          <h3 className="text-2xl font-bold mb-4">Ready to build your secure AI agent?</h3>
+          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+            Join enterprise leaders who are already transforming their operations with custom, secure AI agents designed for their specific workflows.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex items-center gap-2 bg-quantminds-blue/20 border border-quantminds-blue/30 px-4 py-2 rounded-full">
+              <CheckCircle className="h-4 w-4 text-quantminds-blue" />
+              <span className="text-sm text-quantminds-blue font-medium">HIPAA/GDPR Compliant</span>
+            </div>
+            <div className="flex items-center gap-2 bg-quantminds-purple/20 border border-quantminds-purple/30 px-4 py-2 rounded-full">
+              <Shield className="h-4 w-4 text-quantminds-purple" />
+              <span className="text-sm text-quantminds-purple font-medium">Air-Gapped Deployment</span>
+            </div>
+            <div className="flex items-center gap-2 bg-quantminds-blue/20 border border-quantminds-blue/30 px-4 py-2 rounded-full">
+              <Zap className="h-4 w-4 text-quantminds-blue" />
+              <span className="text-sm text-quantminds-blue font-medium">2x Faster Inference</span>
             </div>
           </div>
         </div>
