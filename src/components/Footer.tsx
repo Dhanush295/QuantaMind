@@ -52,7 +52,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-400 hover:text-white transition">About</Link></li>
               <li><Link to="/careers" className="text-gray-400 hover:text-white transition">Careers</Link></li>
-              <li><Link to="/blog" className="text-gray-400 hover:text-white transition">Blog</Link></li>
+              {/* <li><Link to="/blog" className="text-gray-400 hover:text-white transition">Blog</Link></li> */}
               <li><Link to="/contact" className="text-gray-400 hover:text-white transition">Contact</Link></li>
             </ul>
           </div>
@@ -62,8 +62,8 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/features" className="text-gray-400 hover:text-white transition">Features</Link></li>
               <li><Link to="/pricing" className="text-gray-400 hover:text-white transition">Pricing</Link></li>
-              <li><Link to="/documentation" className="text-gray-400 hover:text-white transition">Documentation</Link></li>
-              <li><Link to="/api-reference" className="text-gray-400 hover:text-white transition">API Reference</Link></li>
+              {/* <li><Link to="/documentation" className="text-gray-400 hover:text-white transition">Documentation</Link></li>
+              <li><Link to="/api-reference" className="text-gray-400 hover:text-white transition">API Reference</Link></li> */}
             </ul>
           </div>
           
