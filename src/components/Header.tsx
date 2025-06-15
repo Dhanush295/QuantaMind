@@ -38,7 +38,7 @@ const Header = () => {
             <a href="#usecases" className="text-gray-300 hover:text-white transition">Use Cases</a>
             <a href="#howitworks" className="text-gray-300 hover:text-white transition">How It Works</a>
             <Link to="/contact" className="text-gray-300 hover:text-white transition">Contact</Link>
-            <Link to="/coming-soon">
+            {/* <Link to="/coming-soon">
               <Button variant="outline" size="sm">
                 Login
               </Button>
@@ -47,7 +47,7 @@ const Header = () => {
               <Button size="sm" className="bg-quantminds-purple hover:bg-quantminds-purple/90">
                 Get Started
               </Button>
-            </Link>
+            </Link> */}
           </nav>
           
           <div className="md:hidden">
@@ -94,7 +94,7 @@ const Header = () => {
             >
               Contact
             </Link>
-            <div className="pt-4 flex flex-col space-y-4 w-48">
+            {/* <div className="pt-4 flex flex-col space-y-4 w-48">
               <Link to="/coming-soon">
                 <Button variant="outline" className="w-full">
                   Login
@@ -105,7 +105,7 @@ const Header = () => {
                   Get Started
                 </Button>
               </Link>
-            </div>
+            </div> */}
           </nav>
         </div>
       )}

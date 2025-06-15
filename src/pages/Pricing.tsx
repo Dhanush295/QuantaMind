@@ -2,6 +2,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Check, Star, Zap, Shield, Code, Users, Rocket, Building } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Pricing = () => {
   const saasPlans = [
@@ -85,7 +86,7 @@ const Pricing = () => {
                 <span className="font-semibold">Limited Offer</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-quantminds-purple">
-                🧪 Pilot Program
+                 Pilot Program
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Join 20 founding partners and get exclusive benefits
@@ -128,9 +129,11 @@ const Pricing = () => {
                     <div className="text-4xl font-bold text-white mb-2">FREE</div>
                     <div className="text-white/80">Development</div>
                   </div>
-                  <button className="bg-quantminds-purple hover:bg-quantminds-purple/90 text-white px-8 py-4 rounded-lg text-lg font-semibold transition w-full">
-                    Join Pilot Program
-                  </button>
+                  <Link to="/contact" className="w-full">
+                    <button className="bg-quantminds-purple hover:bg-quantminds-purple/90 text-white px-8 py-4 rounded-lg text-lg font-semibold transition w-full">
+                      Join Pilot Program
+                    </button>
+                  </Link>
                   <p className="text-sm text-gray-400 mt-3">Reviewed in 48 hours</p>
                 </div>
               </div>
@@ -141,7 +144,7 @@ const Pricing = () => {
           <div className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                💼 SaaS Plans
+                 SaaS Plans
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
                 Scalable AI solutions for businesses
@@ -176,7 +179,7 @@ const Pricing = () => {
                       </li>
                     ))}
                   </ul>
-                  
+                  <Link to="/contact" className="w-full">
                   <button className={`w-full py-3 rounded-lg font-semibold transition ${
                     plan.isPopular 
                       ? 'bg-quantminds-purple hover:bg-quantminds-purple/90 text-white' 
@@ -184,6 +187,7 @@ const Pricing = () => {
                   }`}>
                     {plan.cta}
                   </button>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -243,10 +247,11 @@ const Pricing = () => {
                       <span className="text-gray-300">Automotive & robotics</span>
                     </li>
                   </ul>
-                  
+                  <Link to="/contact" className="w-full">
                   <button className="bg-quantminds-purple hover:bg-quantminds-purple/90 text-white px-8 py-3 rounded-lg font-semibold transition w-full">
                     Get Quote
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -256,7 +261,7 @@ const Pricing = () => {
           <div className="mb-20">
             <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                🔐 All Plans Include
+                All Plans Include
               </h2>
             </div>
             
@@ -281,15 +286,17 @@ const Pricing = () => {
               Our experts will help you find the perfect solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact" className="w-full">
               <button className="bg-quantminds-purple hover:bg-quantminds-purple/90 text-white px-8 py-4 rounded-lg text-lg font-semibold transition">
-                Book Demo
+                Contact Us
               </button>
-              <button className="border border-quantminds-purple text-quantminds-purple hover:bg-quantminds-purple hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition">
+              </Link>
+              {/* <button className="border border-quantminds-purple text-quantminds-purple hover:bg-quantminds-purple hover:text-white px-8 py-4 rounded-lg text-lg font-semibold transition">
                 Join Pilot
               </button>
               <button className="text-quantminds-purple hover:text-white border border-transparent hover:border-quantminds-purple px-8 py-4 rounded-lg text-lg font-semibold transition">
                 Contact Us
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
