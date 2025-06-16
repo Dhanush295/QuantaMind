@@ -99,9 +99,8 @@ const PrivacyPolicy = () => {
               </p>
               <div className="mt-4 text-gray-300">
                 <p>QuantaMind AI</p>
-                <p>Privacy Department</p>
-                <p>1234 Tech Street</p>
-                <p>San Francisco, CA 94105</p>
+                <p>2021 N Beverly Plaza</p>
+                <p>Long Beach, CA 9815</p>
               </div>
             </section>
           </div>
