@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Scale, Heart, Building, Shield, FileText, Stethoscope } from 'lucide-react';
+import { Scale, Heart, Building, Shield, FileText } from 'lucide-react';
 
 const UseCasesSection = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -48,6 +48,25 @@ const UseCasesSection = () => {
     }
   ];
 
+  const getColorClasses = (color: string) => {
+    if (color === "quantminds-blue") {
+      return {
+        bg: "bg-quantminds-blue",
+        bgOpacity: "bg-quantminds-blue/20",
+        text: "text-quantminds-blue",
+        border: "border-quantminds-blue/40",
+        icon: "w-16 h-16 text-quantminds-blue"
+      };
+    }
+    return {
+      bg: "bg-quantminds-grey",
+      bgOpacity: "bg-quantminds-grey/20", 
+      text: "text-quantminds-grey",
+      border: "border-quantminds-grey/40",
+      icon: "w-16 h-16 text-quantminds-grey"
+    };
+  };
+
   return (
     <div className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
@@ -68,7 +87,7 @@ const UseCasesSection = () => {
               onClick={() => setActiveTab(index)}
               className={`px-6 py-3 rounded-lg font-medium transition-all ${
                 activeTab === index
-                  ? `bg-${industry.color} text-white`
+                  ? getColorClasses(industry.color).bg + " text-white"
                   : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
               }`}
             >
@@ -87,12 +106,12 @@ const UseCasesSection = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <div className="flex items-center gap-4 mb-6">
-                    <div className={`w-16 h-16 rounded-lg bg-${industries[activeTab].color}/20 flex items-center justify-center`}>
-                      <industries[activeTab].icon className={`w-8 h-8 text-${industries[activeTab].color}`} />
+                    <div className={`w-16 h-16 rounded-lg ${getColorClasses(industries[activeTab].color).bgOpacity} flex items-center justify-center`}>
+                      <industries[activeTab].icon className={`w-8 h-8 ${getColorClasses(industries[activeTab].color).text}`} />
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold">{industries[activeTab].title}</h3>
-                      <p className={`text-${industries[activeTab].color} font-medium`}>{industries[activeTab].headline}</p>
+                      <p className={`${getColorClasses(industries[activeTab].color).text} font-medium`}>{industries[activeTab].headline}</p>
                     </div>
                   </div>
                   
@@ -103,7 +122,7 @@ const UseCasesSection = () => {
                   <ul className="space-y-4">
                     {industries[activeTab].features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
-                        <Shield className={`w-5 h-5 text-${industries[activeTab].color} flex-shrink-0 mt-0.5`} />
+                        <Shield className={`w-5 h-5 ${getColorClasses(industries[activeTab].color).text} flex-shrink-0 mt-0.5`} />
                         <span className="text-muted-foreground">{feature}</span>
                       </li>
                     ))}
@@ -113,8 +132,8 @@ const UseCasesSection = () => {
                 <div className="flex justify-center">
                   <div className="relative w-64 h-64 glassmorphism rounded-xl">
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className={`w-32 h-32 bg-${industries[activeTab].color}/20 rounded-full border-2 border-${industries[activeTab].color}/40 flex items-center justify-center animate-pulse-subtle`}>
-                        <industries[activeTab].icon className={`w-16 h-16 text-${industries[activeTab].color}`} />
+                      <div className={`w-32 h-32 ${getColorClasses(industries[activeTab].color).bgOpacity} rounded-full border-2 ${getColorClasses(industries[activeTab].color).border} flex items-center justify-center animate-pulse-subtle`}>
+                        <industries[activeTab].icon className={getColorClasses(industries[activeTab].color).icon} />
                       </div>
                     </div>
                     
