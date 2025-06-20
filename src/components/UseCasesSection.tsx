@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Scale, Heart, Building, Shield, FileText, Factory, Plane, Zap, Smartphone } from 'lucide-react';
+import { Scale, Heart, Building, Shield, FileText, Factory, Plane, Zap, Smartphone, TrendingUp } from 'lucide-react';
 
 const UseCasesSection = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -27,6 +26,12 @@ const UseCasesSection = () => {
           icon: Building, 
           description: "Run analysis on sensitive client financial data with guaranteed privacy and regulatory compliance.",
           color: "quantminds-grey"
+        },
+        {
+          title: "Corporate Strategy & M&A",
+          icon: TrendingUp,
+          description: "Analyze confidential deal documents, financials, and intellectual property in a secure, air-gapped environment.",
+          color: "quantminds-blue"
         }
       ]
     },
