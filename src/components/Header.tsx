@@ -35,10 +35,10 @@ const Header = () => {
           
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/about" className="text-gray-300 hover:text-white transition">About</Link>
-            <Link to="/technology" className="text-gray-300 hover:text-white transition">Technology</Link>
+            <Link to="/technology" className="text-gray-300 hover:text-white transition">How it works</Link>
             <Link to="/industries" className="text-gray-300 hover:text-white transition">Industries</Link>
-            <a href="#features" className="text-gray-300 hover:text-white transition">Features</a>
-            <a href="#usecases" className="text-gray-300 hover:text-white transition">Use Cases</a>
+            <a href="/features" className="text-gray-300 hover:text-white transition">Features</a>
+            <a href="/pricing" className="text-gray-300 hover:text-white transition">Pricing</a>
             <Link to="/contact" className="text-gray-300 hover:text-white transition">Contact</Link>
           </nav>
           

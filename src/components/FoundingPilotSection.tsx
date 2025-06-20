@@ -45,12 +45,10 @@ const FoundingPilotSection = () => {
             Choose Your Plan
           </h3>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="flex justify-center"> {/* ← changed this line */}
             {/* Free + Commitment */}
-            <div className="relative">
-              <div className="absolute top-0 left-0 bg-gradient-to-r from-quantminds-blue to-quantminds-purple text-white px-4 py-2 text-sm font-bold rounded-br-lg z-10">
-                MOST POPULAR
-              </div>
+            <div className="relative w-full max-w-sm"> {/* optional: limit card width */}
+            
               <Card className="pt-10 border-2 border-quantminds-blue/40 bg-gradient-to-br from-quantminds-blue/10 to-quantminds-blue/5 hover:scale-105 transition-all shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-center text-xl flex items-center justify-center gap-2">
@@ -67,53 +65,6 @@ const FoundingPilotSection = () => {
                     <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-quantminds-blue" /> 4-week pilot</li>
                     <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-quantminds-blue" /> 6-month commitment if satisfied</li>
                     <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-quantminds-blue" /> 40% lifetime discount</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Discounted Pilot */}
-            <Card className="border-2 border-quantminds-purple/40 bg-gradient-to-br from-quantminds-purple/10 to-quantminds-purple/5 hover:scale-105 transition-all shadow-lg">
-              <CardHeader>
-                <CardTitle className="text-center text-xl flex items-center justify-center gap-2">
-                  <Gift className="h-6 w-6 text-quantminds-purple" />
-                  Discounted Pilot
-                </CardTitle>
-                <div className="text-center">
-                  <span className="text-4xl font-bold text-quantminds-purple">$2K–$5K</span>
-                  <div className="text-sm text-quantminds-purple font-semibold">Up to 75% off</div>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-2 text-sm">
-                <ul className="space-y-2">
-                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-quantminds-purple" /> No commitment</li>
-                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-quantminds-purple" /> 25% off ongoing</li>
-                  <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-quantminds-purple" /> Full custom build</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Co-Creation Partner */}
-            <div className="relative">
-              <div className="absolute top-0 left-0 bg-gradient-to-r from-quantminds-blue to-quantminds-purple text-white px-4 py-2 text-sm font-bold rounded-br-lg z-10">
-                PREMIUM
-              </div>
-              <Card className="pt-10 border-2 border-quantminds-blue/40 bg-gradient-to-br from-quantminds-blue/10 to-quantminds-blue/5 hover:scale-105 transition-all shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-center text-xl flex items-center justify-center gap-2">
-                    <Users className="h-6 w-6 text-quantminds-blue" />
-                    Co-Creation Partner
-                  </CardTitle>
-                  <div className="text-center">
-                    <span className="text-4xl font-bold text-quantminds-blue">70% OFF</span>
-                    <div className="text-sm text-quantminds-blue font-semibold">Most benefits</div>
-                  </div>
-                </CardHeader>
-                <CardContent className="space-y-2 text-sm">
-                  <ul className="space-y-2">
-                    <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-quantminds-blue" /> Influence product roadmap</li>
-                    <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-quantminds-blue" /> 6 months free support</li>
-                    <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-quantminds-blue" /> Partner spotlight feature</li>
                   </ul>
                 </CardContent>
               </Card>
