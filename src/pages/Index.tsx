@@ -2,12 +2,14 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
-import WhatMakesUsDifferentSection from '@/components/WhatMakesUsDifferentSection';
-import WhyOfflineMattersSection from '@/components/WhyOfflineMattersSection';
-import WhoWeHelpSection from '@/components/WhoWeHelpSection';
+import FoundingPilotSection from '@/components/FoundingPilotSection';
+import ProblemSection from '@/components/ProblemSection';
+import SolutionSection from '@/components/SolutionSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
-import PilotProgramSection from '@/components/PilotProgramSection';
-import TrustVisionSection from '@/components/TrustVisionSection';
+import UseCasesSection from '@/components/UseCasesSection';
+import HowWereDifferentSection from '@/components/HowWereDifferentSection';
+import WhyDifferentSection from '@/components/WhyDifferentSection';
+import CTASection from '@/components/CTASection';
 
 const Index = () => {
   return (
@@ -17,28 +19,32 @@ const Index = () => {
       <main className="flex-grow">
         <HeroSection />
         
-        <section id="what-makes-us-different">
-          <WhatMakesUsDifferentSection />
+        <section id="founding-pilot">
+          <FoundingPilotSection />
         </section>
 
-        <section id="why-offline-matters">
-          <WhyOfflineMattersSection />
+        <section id="how-different">
+          <HowWereDifferentSection />
         </section>
         
-        <section id="who-we-help">
-          <WhoWeHelpSection />
+        <section id="problem">
+          <ProblemSection />
         </section>
 
-        <section id="how-it-works">
+        <section id="solution">
+          <SolutionSection />
+        </section>
+        
+        <section id="howitworks">
           <HowItWorksSection />
         </section>
         
-        <section id="pilot-program">
-          <PilotProgramSection />
+        <section id="usecases">
+          <UseCasesSection />
         </section>
         
-        <section id="trust-vision">
-          <TrustVisionSection />
+        <section id="cta">
+          <CTASection />
         </section>
       </main>
       
