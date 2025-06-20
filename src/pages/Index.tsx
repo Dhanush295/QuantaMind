@@ -1,3 +1,4 @@
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
@@ -8,7 +9,6 @@ import HowItWorksSection from '@/components/HowItWorksSection';
 import UseCasesSection from '@/components/UseCasesSection';
 import HowWereDifferentSection from '@/components/HowWereDifferentSection';
 import WhyDifferentSection from '@/components/WhyDifferentSection';
-import TeamSection from '@/components/TeamSection';
 import CTASection from '@/components/CTASection';
 
 const Index = () => {
@@ -41,10 +41,6 @@ const Index = () => {
         
         <section id="usecases">
           <UseCasesSection />
-        </section>
-
-        <section id="team">
-          <TeamSection />
         </section>
         
         <section id="cta">
