@@ -11,22 +11,26 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-1">
-            <a href="/" className="text-2xl font-bold flex items-center gap-2 mb-4">
-              <span className="text-white rounded-md bg-quantminds-purple/90 px-2">Q</span>
+            <a href="/" className="text-xl font-bold flex items-center gap-3 mb-4">
+              <img 
+                src="/lovable-uploads/d97f1fe1-486c-4552-b2ed-9669a0710acf.png" 
+                alt="QuantaMind Logo" 
+                className="h-12 w-12 object-contain"
+              />
               <span className="text-white">QuantaMind</span>
             </a>
             <p className="text-gray-400 mb-4">
               AI-powered business intelligence through GPU-accelerated custom models.
             </p>
             <div className="flex space-x-4">
-              <Link to="/contact" className="text-gray-400 hover:text-quantminds-purple transition">
+              <Link to="/contact" className="text-gray-400 hover:text-quantminds-grey transition">
                 <Github size={20} />
               </Link>
               <a
                 href="https://x.com/QuantaMind_"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-quantminds-purple transition"
+                className="text-gray-400 hover:text-quantminds-grey transition"
               >
                 <Twitter size={20} />
               </a>
@@ -34,13 +38,13 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/quantaamind"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-quantminds-purple transition"
+                className="text-gray-400 hover:text-quantminds-grey transition"
               >
                 <Linkedin size={20} />
               </a>
               <a
                 href="mailto:info@quantamind.co"
-                className="text-gray-400 hover:text-quantminds-purple transition"
+                className="text-gray-400 hover:text-quantminds-grey transition"
               >
                 <Mail size={20} />
               </a>
@@ -96,4 +100,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

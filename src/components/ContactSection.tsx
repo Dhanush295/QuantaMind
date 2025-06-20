@@ -16,7 +16,7 @@ const ContactSection = () => {
           You focus on growing your business—let us handle the AI.
         </p>
         <Link to="/contact">
-          <Button size="lg" className="font-medium gap-2 bg-quantminds-purple hover:bg-quantminds-purple/90">
+          <Button size="lg" className="font-medium gap-2 bg-quantminds-grey hover:bg-quantminds-grey/90">
             Contact Us
           </Button>
         </Link>
