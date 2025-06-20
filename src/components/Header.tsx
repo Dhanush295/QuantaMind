@@ -27,27 +27,19 @@ const Header = () => {
       >
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center">
-            <a href="/" className="text-2xl font-bold flex items-center gap-2">
+            <Link to="/" className="text-2xl font-bold flex items-center gap-2">
               <span className="text-white rounded-md bg-quantminds-purple/90 px-2">Q</span>
               <span className={`transition-all ${isScrolled ? 'text-white' : 'text-white'}`}>QuantaMind</span>
-            </a>
+            </Link>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/about" className="text-gray-300 hover:text-white transition">About</Link>
+            <Link to="/technology" className="text-gray-300 hover:text-white transition">Technology</Link>
+            <Link to="/industries" className="text-gray-300 hover:text-white transition">Industries</Link>
             <a href="#features" className="text-gray-300 hover:text-white transition">Features</a>
             <a href="#usecases" className="text-gray-300 hover:text-white transition">Use Cases</a>
-            <a href="#howitworks" className="text-gray-300 hover:text-white transition">How It Works</a>
             <Link to="/contact" className="text-gray-300 hover:text-white transition">Contact</Link>
-            {/* <Link to="/coming-soon">
-              <Button variant="outline" size="sm">
-                Login
-              </Button>
-            </Link>
-            <Link to="/coming-soon">
-              <Button size="sm" className="bg-quantminds-purple hover:bg-quantminds-purple/90">
-                Get Started
-              </Button>
-            </Link> */}
           </nav>
           
           <div className="md:hidden">
@@ -66,6 +58,27 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-40 bg-background/95 backdrop-blur-lg md:hidden pt-16">
           <nav className="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+            <Link 
+              to="/about" 
+              className="text-gray-300 hover:text-white transition"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              About
+            </Link>
+            <Link 
+              to="/technology" 
+              className="text-gray-300 hover:text-white transition"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Technology
+            </Link>
+            <Link 
+              to="/industries" 
+              className="text-gray-300 hover:text-white transition"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Industries
+            </Link>
             <a 
               href="#features" 
               className="text-gray-300 hover:text-white transition"
@@ -80,13 +93,6 @@ const Header = () => {
             >
               Use Cases
             </a>
-            <a 
-              href="#howitworks" 
-              className="text-gray-300 hover:text-white transition"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              How It Works
-            </a>
             <Link 
               to="/contact" 
               className="text-gray-300 hover:text-white transition"
@@ -94,18 +100,6 @@ const Header = () => {
             >
               Contact
             </Link>
-            {/* <div className="pt-4 flex flex-col space-y-4 w-48">
-              <Link to="/coming-soon">
-                <Button variant="outline" className="w-full">
-                  Login
-                </Button>
-              </Link>
-              <Link to="/coming-soon">
-                <Button className="w-full bg-quantminds-purple hover:bg-quantminds-purple/90">
-                  Get Started
-                </Button>
-              </Link>
-            </div> */}
           </nav>
         </div>
       )}
