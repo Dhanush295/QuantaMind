@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Package, Brain, Shield } from 'lucide-react';
+import { Package, Brain, Shield, Building2 } from 'lucide-react';
 
 const HowWereDifferentSection = () => {
   const differentiators = [
@@ -21,6 +21,12 @@ const HowWereDifferentSection = () => {
       description: "Our core difference is simple: our AI runs completely offline, on your own servers. This is critical for industries like healthcare, manufacturing, and defense where cloud connections are too slow, unreliable, or insecure. Your data, and the intelligence built from it, is guaranteed to stay in your control.",
       icon: Shield,
       color: "quantminds-blue"
+    },
+    {
+      title: "Modular Architecture for Scale",
+      description: "Our customized AI solutions are built with privacy and scalability at their core. Each AI agent is designed with a modular architecture that allows us to rapidly build, deploy, and scale your solutions while maintaining complete data privacy and enterprise-grade security.",
+      icon: Building2,
+      color: "quantminds-grey"
     }
   ];
 
@@ -36,7 +42,7 @@ const HowWereDifferentSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {differentiators.map((item, index) => (
             <div key={index} className="glassmorphism p-8 rounded-xl group hover:scale-105 transition-all duration-300">
               <div className="text-center mb-6">

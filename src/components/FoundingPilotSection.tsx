@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -20,7 +21,6 @@ const FoundingPilotSection = () => {
           <p className="text-lg text-muted-foreground">20 spots only — early access & exclusive pricing</p>
         </div>
 
-
         {/* Offer */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -34,8 +34,6 @@ const FoundingPilotSection = () => {
           <p className="text-md font-medium mb-6 text-blue-400">
             Starts from October — get your spots early.
           </p>
-
-          
         </div>
 
         {/* Plan Options */}
@@ -45,10 +43,8 @@ const FoundingPilotSection = () => {
             Choose Your Plan
           </h3>
 
-          <div className="flex justify-center"> {/* ← changed this line */}
-            {/* Free + Commitment */}
-            <div className="relative w-full max-w-sm"> {/* optional: limit card width */}
-            
+          <div className="flex justify-center">
+            <div className="relative w-full max-w-sm">
               <Card className="pt-10 border-2 border-quantminds-blue/40 bg-gradient-to-br from-quantminds-blue/10 to-quantminds-blue/5 hover:scale-105 transition-all shadow-lg">
                 <CardHeader>
                   <CardTitle className="text-center text-xl flex items-center justify-center gap-2">
@@ -60,12 +56,19 @@ const FoundingPilotSection = () => {
                     <div className="text-sm text-quantminds-blue font-semibold">Try first, commit later</div>
                   </div>
                 </CardHeader>
-                <CardContent className="space-y-2 text-sm">
+                <CardContent className="space-y-4 text-sm">
                   <ul className="space-y-2">
                     <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-quantminds-blue" /> 4-week pilot</li>
                     <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-quantminds-blue" /> 6-month commitment if satisfied</li>
                     <li className="flex gap-2"><CheckCircle className="h-4 w-4 text-quantminds-blue" /> 40% lifetime discount</li>
                   </ul>
+                  <div className="pt-4">
+                    <Link to="/contact">
+                      <Button className="w-full bg-quantminds-blue hover:bg-quantminds-blue/90 text-white font-semibold py-3 rounded-lg transition-all hover:scale-105">
+                        Join Now
+                      </Button>
+                    </Link>
+                  </div>
                 </CardContent>
               </Card>
             </div>
