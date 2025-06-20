@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -11,7 +10,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-1">
-            <a href="/" className="text-lg font-bold flex items-center gap-3 mb-4">
+            <a href="/" className="text-xl font-bold flex items-center gap-3 mb-4">
               <img 
                 src="/lovable-uploads/d97f1fe1-486c-4552-b2ed-9669a0710acf.png" 
                 alt="QuantaMind Logo" 
