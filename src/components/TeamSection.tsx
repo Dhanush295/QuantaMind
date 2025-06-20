@@ -30,15 +30,6 @@ const TeamSection = () => {
   return (
     <div className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            <span className="text-gradient">Founded by Engineers,</span> Backed by Experience
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our team combines deep technical expertise with real-world enterprise experience to deliver AI solutions that work.
-          </p>
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {team.map((member, index) => (
             <div key={index} className="glassmorphism p-8 rounded-xl text-center group hover:scale-105 transition-transform duration-300">
