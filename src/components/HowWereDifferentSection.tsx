@@ -1,28 +1,25 @@
 
 import React from 'react';
-import { Building2, Brain, Shield } from 'lucide-react';
+import { Package, Brain, Shield } from 'lucide-react';
 
 const HowWereDifferentSection = () => {
   const differentiators = [
     {
       title: "A Finished Product, Not a Difficult Project",
-      description: "Big tech provides powerful but raw AI tools. To use them, your IT team would need to start an expensive, 18-month engineering project. We deliver a finished, ready-to-use AI agent in just a few weeks. We turn a complex project into a simple product.",
-      icon: Building2,
-      category: "Versus Big Tech (AWS, Azure, GCP)",
+      description: "Big Tech and IT consultants provide powerful but raw AI tools. To use them, your team would need to start an expensive, 18-month engineering project. We deliver a finished, ready-to-use AI agent in just a few weeks, saving you the time, cost, and risk.",
+      icon: Package,
       color: "quantminds-blue"
     },
     {
-      title: "Your \"Custom Brain,\" Not a Generic Tool",
-      description: "Generic cloud AI knows about the world. Our AI knows about your world. We train our agents on your company's private data, turning them into an expert on your specific contracts, your financial data, or your case files—a competitive advantage that only you own.",
+      title: "Your Proprietary AI Brain, Not a Generic Tool",
+      description: "Generic cloud AI knows about the world. Our AI knows about your world. We train our agents on your company's own private data, turning them into an expert on your specific contracts or financial data—a competitive advantage that only you own.",
       icon: Brain,
-      category: "Versus Third-Party AI Agents (Cloud Tools)",
       color: "quantminds-grey"
     },
     {
-      title: "True Offline Control",
-      description: "Our core difference is simple: our AI runs completely offline, on your own servers. This guarantees true data privacy, instant real-time speed, and 100% reliability in a way that no cloud-connected platform ever can. Your data, and the intelligence built from it, stays in your house.",
+      title: "Your Data Stays in Your House",
+      description: "Our core difference is simple: our AI runs completely offline, on your own servers. This is critical for industries like healthcare, manufacturing, and defense where cloud connections are too slow, unreliable, or insecure. Your data, and the intelligence built from it, is guaranteed to stay in your control.",
       icon: Shield,
-      category: "Our Unique Foundation",
       color: "quantminds-blue"
     }
   ];
@@ -32,11 +29,10 @@ const HowWereDifferentSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            How We're Different: <span className="text-gradient">A New Category of AI</span>
+            Why Quantamind? <span className="text-gradient">A New Category of Enterprise AI</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Big tech sells you powerful but complex tools. Generic AI agents offer convenience but create security risks. 
-            We offer a finished, secure product that is uniquely yours.
+            Big Tech sells complex toolkits. Cloud AI creates security risks. We deliver a finished product that is private, powerful, and uniquely yours.
           </p>
         </div>
 
@@ -46,9 +42,6 @@ const HowWereDifferentSection = () => {
               <div className="text-center mb-6">
                 <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-${item.color}/20 border-2 border-${item.color} flex items-center justify-center group-hover:scale-110 transition-transform`}>
                   <item.icon className={`w-8 h-8 text-${item.color}`} />
-                </div>
-                <div className={`inline-block px-3 py-1 rounded-full bg-${item.color}/20 text-${item.color} text-sm font-medium mb-3`}>
-                  {item.category}
                 </div>
               </div>
               
