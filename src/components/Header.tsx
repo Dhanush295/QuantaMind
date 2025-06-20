@@ -27,11 +27,11 @@ const Header = () => {
       >
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold flex items-center gap-3">
+            <Link to="/" className="text-lg font-bold flex items-center gap-3">
               <img 
                 src="/lovable-uploads/d97f1fe1-486c-4552-b2ed-9669a0710acf.png" 
                 alt="QuantaMind Logo" 
-                className="h-8 w-8 object-contain"
+                className="h-12 w-12 object-contain"
               />
               <span className={`transition-all ${isScrolled ? 'text-white' : 'text-white'}`}>QuantaMind</span>
             </Link>
