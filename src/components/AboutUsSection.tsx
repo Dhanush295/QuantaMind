@@ -13,19 +13,20 @@ const AboutUsSection = () => {
       initials: "D"
     },
     {
+      name: "Aanya",
+      title: "Chief Operating Officer",
+      bio: "Data Science Researcher specializing in AI model optimization and operational excellence",
+      icon: Brain,
+      initials: "A"
+    },
+    {
       name: "Chirag",
       title: "Chief Technology Officer",
       bio: "Ex-Flipkart Engineer with extensive experience in distributed systems and AI infrastructure at scale",
       icon: Code,
       initials: "C"
     },
-    {
-      name: "Aanya",
-      title: "Chief Operating Officer",
-      bio: "Data Science Researcher specializing in AI model optimization and operational excellence",
-      icon: Brain,
-      initials: "A"
-    }
+    
   ];
 
   return (
