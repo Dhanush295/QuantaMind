@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
-import { Scale, Heart, Building, Shield, FileText, Factory, Plane, Zap, Smartphone } from 'lucide-react';
+import { Scale, Heart, Factory, Plane, Building, Zap, Smartphone, Fuel } from 'lucide-react';
 
 const UseCasesSection = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -11,50 +11,50 @@ const UseCasesSection = () => {
       title: "Professional Services",
       industries: [
         {
-          title: "Law Firms",
+          title: "Legal & Litigation",
           icon: Scale,
-          description: "Securely analyze case files and contracts without risking attorney-client privilege.",
+          problem: "Analyzing sensitive case files for e-discovery using cloud AI risks waiving attorney-client privilege.",
+          solution: "A private AI agent that runs on your local network, allowing you to sift through millions of documents with zero data leaving your firm.",
           color: "quantminds-grey"
         },
         {
-          title: "Healthcare", 
+          title: "Healthcare & Medical Devices", 
           icon: Heart,
-          description: "Process live diagnostic data from medical devices with zero latency and full HIPAA compliance.",
+          problem: "AI analyzing live diagnostic data (like an ECG) from a medical device cannot afford cloud latency or a dropped connection.",
+          solution: "An on-device AI agent that processes data instantly, providing real-time feedback to clinicians with absolute reliability and HIPAA compliance.",
           color: "quantminds-blue"
-        },
-        {
-          title: "Finance & Accounting",
-          icon: Building, 
-          description: "Run analysis on sensitive client financial data with guaranteed privacy and regulatory compliance.",
-          color: "quantminds-grey"
         }
       ]
     },
     {
-      title: "Industrial & Edge Computing",
+      title: "Industrial & Critical Systems",
       industries: [
         {
-          title: "Manufacturing & IoT",
+          title: "Industrial & Manufacturing",
           icon: Factory,
-          description: "Run predictive maintenance AI directly on factory machinery to detect failures in real-time, even with unreliable Wi-Fi.",
+          problem: "A factory floor has unreliable Wi-Fi, but you need to constantly monitor machinery for signs of failure.",
+          solution: "An offline AI that runs on a small computer attached to the machine, using vibration and temperature data to predict failures before they happen, preventing costly downtime.",
           color: "quantminds-blue"
         },
         {
-          title: "Defense & Aerospace",
+          title: "Aerospace & Defense",
           icon: Plane,
-          description: "Deploy autonomous navigation and data analysis on satellites, drones, and other mission-critical systems that must operate without a cloud connection.",
+          problem: "A satellite or autonomous drone needs to make independent navigation and data-processing decisions in real-time, without waiting for commands from the ground.",
+          solution: "A lightweight, on-board AI agent that enables true autonomy for mission-critical systems where a cloud connection is impossible.",
           color: "quantminds-grey"
         },
         {
-          title: "Energy & Infrastructure",
+          title: "Energy & Utilities",
           icon: Zap,
-          description: "Monitor remote assets like pipelines or turbines with on-device AI that works in locations with no internet access.",
+          problem: "Remote assets like pipelines or turbines need constant monitoring in locations with no internet access.",
+          solution: "Monitor remote assets with on-device AI that works in locations with no internet access, ensuring continuous operation and predictive maintenance.",
           color: "quantminds-blue"
         },
         {
           title: "Consumer Electronics",
           icon: Smartphone,
-          description: "Enable smart, on-device features—like real-time voice recognition or health monitoring—without sending user data to the cloud, ensuring absolute privacy.",
+          problem: "Smart devices need real-time processing capabilities without compromising user privacy or requiring constant connectivity.",
+          solution: "Enable smart, on-device features—like real-time voice recognition—without sending user data to the cloud, ensuring absolute privacy.",
           color: "quantminds-grey"
         }
       ]
@@ -113,10 +113,10 @@ const UseCasesSection = () => {
         <div className="transition-all duration-300">
           <Card className="bg-background border-border overflow-hidden">
             <CardContent className="p-8 md:p-12">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {categories[activeTab].industries.map((industry, index) => (
                   <div key={index} className="glassmorphism p-6 rounded-xl">
-                    <div className="flex items-center gap-4 mb-4">
+                    <div className="flex items-center gap-4 mb-6">
                       <div className={`w-12 h-12 rounded-lg ${getColorClasses(industry.color).bgOpacity} flex items-center justify-center`}>
                         {React.createElement(industry.icon, {
                           className: getColorClasses(industry.color).icon
@@ -125,9 +125,21 @@ const UseCasesSection = () => {
                       <h3 className="text-xl font-bold">{industry.title}</h3>
                     </div>
                     
-                    <p className="text-muted-foreground leading-relaxed">
-                      {industry.description}
-                    </p>
+                    <div className="space-y-4">
+                      <div>
+                        <h4 className="text-sm font-semibold text-red-400 mb-2">The Problem:</h4>
+                        <p className="text-muted-foreground leading-relaxed text-sm">
+                          {industry.problem}
+                        </p>
+                      </div>
+                      
+                      <div>
+                        <h4 className="text-sm font-semibold text-quantminds-blue mb-2">Our Solution:</h4>
+                        <p className="text-muted-foreground leading-relaxed text-sm">
+                          {industry.solution}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
