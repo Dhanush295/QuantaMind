@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -22,14 +23,14 @@ const Footer = () => {
               AI-powered business intelligence through GPU-accelerated custom models.
             </p>
             <div className="flex space-x-4">
-              <Link to="/contact" className="text-gray-400 hover:text-quantminds-purple transition">
+              <Link to="/contact" className="text-gray-400 hover:text-quantminds-grey transition">
                 <Github size={20} />
               </Link>
               <a
                 href="https://x.com/QuantaMind_"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-quantminds-purple transition"
+                className="text-gray-400 hover:text-quantminds-grey transition"
               >
                 <Twitter size={20} />
               </a>
@@ -37,13 +38,13 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/quantaamind"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-quantminds-purple transition"
+                className="text-gray-400 hover:text-quantminds-grey transition"
               >
                 <Linkedin size={20} />
               </a>
               <a
                 href="mailto:info@quantamind.co"
-                className="text-gray-400 hover:text-quantminds-purple transition"
+                className="text-gray-400 hover:text-quantminds-grey transition"
               >
                 <Mail size={20} />
               </a>

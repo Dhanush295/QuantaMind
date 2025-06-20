@@ -63,13 +63,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// QuantMinds custom colors
+				// QuantMinds custom colors - changed from purple to grey theme
 				quantminds: {
-					purple: {
-						DEFAULT: '#9b87f5',
-						light: '#D6BCFA',
-						dark: '#6E59A5',
-						darker: '#1A1F2C',
+					grey: {
+						DEFAULT: '#6B7280',
+						light: '#9CA3AF',
+						dark: '#374151',
+						darker: '#1F2937',
 					},
 					blue: {
 						DEFAULT: '#1EAEDB',
@@ -113,8 +113,8 @@ export default {
 					'50%': { opacity: '0.85' },
 				},
 				'glow': {
-					'0%, 100%': { boxShadow: '0 0 5px rgba(155, 135, 245, 0.5)' },
-					'50%': { boxShadow: '0 0 20px rgba(155, 135, 245, 0.8)' },
+					'0%, 100%': { boxShadow: '0 0 5px rgba(107, 114, 128, 0.5)' },
+					'50%': { boxShadow: '0 0 20px rgba(107, 114, 128, 0.8)' },
 				},
 				'data-flow': {
 					'0%': { transform: 'translateX(-100%)' },
@@ -130,7 +130,7 @@ export default {
 				'data-flow': 'data-flow 5s linear infinite',
 			},
 			backgroundImage: {
-				'hero-pattern': "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgODAwIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNMCAwaDQwdjQwSDB6IiBmaWxsPSJub25lIiBzdHJva2U9IiM5Yjg3ZjUyMCIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIj48L3JlY3Q+PC9zdmc+')",
+				'hero-pattern': "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4MDAgODAwIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNMCAwaDQwdjQwSDB6IiBmaWxsPSJub25lIiBzdHJva2U9IiM2Qjc2ODAyMCIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIj48L3JlY3Q+PC9zdmc+')",
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 			},
 		}
