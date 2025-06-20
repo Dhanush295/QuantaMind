@@ -3,10 +3,12 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import HeroSection from '@/components/HeroSection';
 import FeaturesSection from '@/components/FeaturesSection';
+import AboutUsSection from '@/components/AboutUsSection';
+import TechnologySection from '@/components/TechnologySection';
+import IndustriesSection from '@/components/IndustriesSection';
 import UseCasesSection from '@/components/UseCasesSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import FoundingPilotSection from '@/components/FoundingPilotSection';
-import CTASection from '@/components/CTASection';
 import ContactSection from '@/components/ContactSection';
 
 const Index = () => {
@@ -21,6 +23,21 @@ const Index = () => {
         <section id="founding-pilot" className="relative">
           <FoundingPilotSection />
         </section>
+
+        {/* About Us Section */}
+        <section id="about">
+          <AboutUsSection />
+        </section>
+
+        {/* Technology Section */}
+        <section id="technology">
+          <TechnologySection />
+        </section>
+
+        {/* Industries Section */}
+        <section id="industries">
+          <IndustriesSection />
+        </section>
         
         <section id="features">
           <FeaturesSection />
@@ -33,8 +50,6 @@ const Index = () => {
         <section id="howitworks">
           <HowItWorksSection />
         </section>
-        
-        <CTASection />
         
         <section id="contact">
           <ContactSection />

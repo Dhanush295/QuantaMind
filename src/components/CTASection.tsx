@@ -19,12 +19,12 @@ const CTASection = () => {
                 Ready for <span className="text-gradient">custom AI</span>?
               </h2>
               <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8">
-                Join early access and get ahead with AI-powered insights.
+                Join 20 founding partners and get exclusive benefits with our secure AI platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact">
                   <Button size="lg" className="font-medium gap-2 bg-quantminds-purple hover:bg-quantminds-purple/90">
-                    Get Started <ArrowRight size={16} />
+                    Apply to Join Our Founding Partner Program <ArrowRight size={16} />
                   </Button>
                 </Link>
               </div>
@@ -37,9 +37,9 @@ const CTASection = () => {
                 <div className="absolute inset-4 rounded-full border-2 border-dashed border-quantminds-purple/40 animate-spin-slow"></div>
                 <div className="absolute inset-12 rounded-full border border-white/10 flex items-center justify-center p-4 sm:p-6 text-center">
                   <div>
-                    <div className="font-bold text-4xl sm:text-5xl mb-2 text-gradient">97%</div>
+                    <div className="font-bold text-4xl sm:text-5xl mb-2 text-gradient">20</div>
                     <p className="text-sm text-muted-foreground">
-                      improved insights in 30 days
+                      founding partner spots
                     </p>
                   </div>
                 </div>

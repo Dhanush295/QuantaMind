@@ -36,8 +36,8 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="font-medium">
-                Join Waitlist
+              <Button size="lg" className="font-medium bg-quantminds-purple hover:bg-quantminds-purple/90">
+                Apply to Join Our Founding Partner Program
               </Button>
             </Link>
           </div>
