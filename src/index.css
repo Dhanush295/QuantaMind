@@ -124,4 +124,8 @@
     background-image: radial-gradient(rgba(107, 114, 128, 0.15) 2px, transparent 2px);
     background-size: 30px 30px;
   }
+
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
 }

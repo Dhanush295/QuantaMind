@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Cpu, Database, Zap } from 'lucide-react';
+import { Shield, Lock, Server } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
@@ -9,51 +9,51 @@ const HeroSection = () => {
     <div className="relative min-h-screen flex flex-col items-center justify-center px-4 py-16 sm:py-20 overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-hero-pattern opacity-10"></div>
-      <div className="absolute inset-0 bg-gradient-radial from-quantminds-purple/20 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-radial from-quantminds-grey/20 via-transparent to-transparent"></div>
 
       <div className="relative z-10 container mx-auto flex flex-col lg:flex-row items-center gap-16">
         
         {/* Left Text Content */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           <div className="flex items-center justify-center lg:justify-start mb-4">
-            <span className="bg-quantminds-purple/20 text-quantminds-purple px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1">
+            <span className="bg-quantminds-grey/20 text-quantminds-grey px-3 py-1 rounded-full text-sm font-medium flex items-center gap-1">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-quantminds-purple opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-quantminds-purple"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-quantminds-grey opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-quantminds-grey"></span>
               </span>
-              Now in Early Access
+              Founding Partner Program Open
             </span>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
-             <span className="text-gradient">Smarter AI,</span> <br />
-             Built for Your Business
+             <span className="text-gradient">AI for the Enterprise.</span> <br />
+             Private by Design.
            </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8">
-            Custom AI agents trained on your data. Deploy anywhere—cloud, servers, or devices. Secure, fast, and compliant.
+            We build custom AI agents that run 100% offline, inside your own secure walls. Get the power of AI with zero risk to your sensitive data.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Link to="/contact">
-              <Button size="lg" className="font-medium bg-quantminds-purple hover:bg-quantminds-purple/90">
-                Apply to Join Our Founding Partner Program
+              <Button size="lg" className="font-medium bg-quantminds-grey hover:bg-quantminds-grey/90">
+                Join Our Founding Partner Program
               </Button>
             </Link>
           </div>
 
           <div className="mt-10 sm:mt-12 flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-4">
             <div className="flex items-center gap-2">
-              <Zap size={20} className="text-quantminds-purple" />
-              <span className="text-sm text-muted-foreground">GPU Optimized</span>
+              <Shield size={20} className="text-quantminds-grey" />
+              <span className="text-sm text-muted-foreground">100% Offline</span>
             </div>
             <div className="flex items-center gap-2">
-              <Database size={20} className="text-quantminds-purple" />
-              <span className="text-sm text-muted-foreground">Your Data</span>
+              <Lock size={20} className="text-quantminds-grey" />
+              <span className="text-sm text-muted-foreground">Private by Design</span>
             </div>
             <div className="flex items-center gap-2">
-              <Cpu size={20} className="text-quantminds-purple" />
-              <span className="text-sm text-muted-foreground">Secure</span>
+              <Server size={20} className="text-quantminds-grey" />
+              <span className="text-sm text-muted-foreground">Your Infrastructure</span>
             </div>
           </div>
         </div>
@@ -61,16 +61,18 @@ const HeroSection = () => {
         {/* Right Visualization */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg aspect-square glassmorphism rounded-xl overflow-hidden animate-float">
-            {/* Animated Panels */}
+            {/* Secure AI Visualization */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-full h-full p-4 sm:p-6">
                 <div className="grid grid-cols-12 gap-2 h-full">
                   <div className="col-span-8 flex flex-col gap-2">
-                    <div className="bg-quantminds-purple/10 rounded-md flex-1 border border-quantminds-purple/30 animate-pulse-subtle p-3">
-                      <div className="h-1.5 w-1/4 bg-quantminds-purple/40 rounded-full mb-2"></div>
+                    <div className="bg-quantminds-grey/10 rounded-md flex-1 border border-quantminds-grey/30 animate-pulse-subtle p-3">
+                      <div className="h-1.5 w-1/4 bg-quantminds-grey/40 rounded-full mb-2"></div>
                       <div className="grid grid-cols-3 gap-2">
                         {[...Array(6)].map((_, i) => (
-                          <div key={i} className="h-8 bg-quantminds-purple/20 rounded"></div>
+                          <div key={i} className="h-8 bg-quantminds-grey/20 rounded flex items-center justify-center">
+                            <Lock size={12} className="text-quantminds-grey/60" />
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -78,7 +80,9 @@ const HeroSection = () => {
                       <div className="h-1.5 w-1/3 bg-quantminds-blue/40 rounded-full mb-2"></div>
                       <div className="flex gap-2">
                         {[1, 2, 3].map(i => (
-                          <div key={i} className="h-16 w-1/3 bg-quantminds-blue/20 rounded"></div>
+                          <div key={i} className="h-16 w-1/3 bg-quantminds-blue/20 rounded flex items-center justify-center">
+                            <Shield size={12} className="text-quantminds-blue/60" />
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -92,13 +96,13 @@ const HeroSection = () => {
                     </div>
                   </div>
                   <div className="col-span-4 flex flex-col gap-2">
-                    <div className="bg-quantminds-purple/20 rounded-md flex-1 border border-quantminds-purple/30 p-3">
-                      <div className="h-1.5 w-1/2 bg-quantminds-purple/40 rounded-full mb-3"></div>
+                    <div className="bg-quantminds-grey/20 rounded-md flex-1 border border-quantminds-grey/30 p-3">
+                      <div className="h-1.5 w-1/2 bg-quantminds-grey/40 rounded-full mb-3"></div>
                       <div className="flex items-end h-full justify-between">
                         {[25, 50, 75, 100, 40].map((h, i) => (
                           <div
                             key={i}
-                            className={`w-1/5 rounded-sm mx-0.5 bg-quantminds-purple/${30 + i * 10} ${i === 3 ? "animate-pulse-subtle" : ""}`}
+                            className={`w-1/5 rounded-sm mx-0.5 bg-quantminds-grey/${30 + i * 10} ${i === 3 ? "animate-pulse-subtle" : ""}`}
                             style={{ height: `${h}%` }}
                           ></div>
                         ))}
@@ -112,11 +116,12 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* Data Flow Animation */}
-            <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-              <div className="absolute h-1 w-20 bg-quantminds-purple/50 rounded-full animate-data-flow" style={{ top: '30%' }}></div>
-              <div className="absolute h-1 w-12 bg-quantminds-blue/50 rounded-full animate-data-flow" style={{ top: '50%', animationDelay: '1.5s' }}></div>
-              <div className="absolute h-1 w-16 bg-quantminds-purple/50 rounded-full animate-data-flow" style={{ top: '70%', animationDelay: '3s' }}></div>
+            {/* Security indicators */}
+            <div className="absolute top-4 right-4">
+              <div className="flex items-center gap-1 bg-green-500/20 px-2 py-1 rounded-full">
+                <Shield size={12} className="text-green-500" />
+                <span className="text-xs text-green-500">SECURE</span>
+              </div>
             </div>
           </div>
         </div>
