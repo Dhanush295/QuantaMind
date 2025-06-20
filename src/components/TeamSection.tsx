@@ -76,25 +76,6 @@ const TeamSection = () => {
             </div>
           ))}
         </div>
-
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-8 bg-quantminds-grey/10 rounded-xl p-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-quantminds-grey mb-2">10+</div>
-              <div className="text-sm text-gray-400">Years Combined Experience</div>
-            </div>
-            <div className="w-px h-12 bg-gray-700"></div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-quantminds-blue mb-2">50+</div>
-              <div className="text-sm text-gray-400">AI Models Deployed</div>
-            </div>
-            <div className="w-px h-12 bg-gray-700"></div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-quantminds-grey mb-2">100%</div>
-              <div className="text-sm text-gray-400">Enterprise Focus</div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
