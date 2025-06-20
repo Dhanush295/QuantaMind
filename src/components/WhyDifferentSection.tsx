@@ -5,22 +5,22 @@ import { Package, Shield, Brain, Clock, DollarSign, Users } from 'lucide-react';
 const WhyDifferentSection = () => {
   const differentiators = [
     {
-      title: "Product, Not a Project",
-      description: "An internal IT team would spend over a year and millions of dollars to build this. We deliver a finished, ready-to-use product in weeks.",
+      title: "A Finished Product, Not a Complex Project",
+      description: "An internal IT team would spend over a year and millions of dollars trying to build a secure AI platform from scratch. We deliver a finished, ready-to-use solution in just a few weeks, saving you the cost, time, and risk of a massive internal project.",
       icon: Package,
       color: "quantminds-grey",
       stats: "Weeks vs. Years"
     },
     {
-      title: "Private by Design", 
-      description: "Cloud AI companies can't easily offer an offline solution. Our entire platform is built from the ground up to guarantee data never leaves your control.",
+      title: "True Data Control, Not Just Cloud Security", 
+      description: "Cloud AI companies offer you a secure room in their house. We give you a secure room in your house. Our platform runs entirely on your own internal servers, meaning your sensitive data never leaves your control, guaranteed.",
       icon: Shield,
       color: "quantminds-blue",
-      stats: "100% Offline"
+      stats: "100% Your Control"
     },
     {
-      title: "Your Proprietary Brain",
-      description: "We build an AI that becomes your unique competitive advantage, trained on your data and for your specific needs.",
+      title: "Your Proprietary AI Brain, Not a Generic Tool",
+      description: "Generic AI tools understand the world. We build an AI agent that understands your world. By training on your company's own private data, our AI becomes a unique expert in your specific contracts, your financial models, or your scientific research—a competitive advantage that only you own.",
       icon: Brain,
       color: "quantminds-grey", 
       stats: "Custom Built"
@@ -32,10 +32,10 @@ const WhyDifferentSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            A True Partner, <span className="text-gradient">Not Just a Tool</span>
+            Why Choose <span className="text-gradient">Quantamind</span>?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Why Quantamind is fundamentally different from other AI solutions
+            How we are fundamentally different from other AI solutions
           </p>
         </div>
 

@@ -7,6 +7,7 @@ import SolutionSection from '@/components/SolutionSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import UseCasesSection from '@/components/UseCasesSection';
 import WhyDifferentSection from '@/components/WhyDifferentSection';
+import FoundingPilotSection from '@/components/FoundingPilotSection';
 import TeamSection from '@/components/TeamSection';
 import CTASection from '@/components/CTASection';
 
@@ -36,6 +37,10 @@ const Index = () => {
 
         <section id="why-different">
           <WhyDifferentSection />
+        </section>
+
+        <section id="founding-pilot">
+          <FoundingPilotSection />
         </section>
 
         <section id="team">
