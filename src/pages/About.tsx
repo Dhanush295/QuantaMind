@@ -1,6 +1,7 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import AboutUsSection from '@/components/AboutUsSection';
 
 const About = () => {
   return (
@@ -46,7 +47,7 @@ const About = () => {
             </div>
           </div>
           
-          <div className="glassmorphism p-8 rounded-xl">
+          <div className="glassmorphism p-8 rounded-xl mb-16">
             <h2 className="text-2xl font-semibold mb-8 text-center text-quantminds-purple">Our Values</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
@@ -70,6 +71,9 @@ const About = () => {
             </div>
           </div>
         </div>
+        
+        {/* Our Team Section */}
+        <AboutUsSection />
       </main>
       
       <Footer />
