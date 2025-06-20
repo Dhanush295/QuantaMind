@@ -29,7 +29,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/" className="text-2xl font-bold flex items-center gap-3">
               <img 
-                src="/lovable-uploads/3a3b3390-fba8-4ee7-be0d-7aad30a171d8.png" 
+                src="/lovable-uploads/d97f1fe1-486c-4552-b2ed-9669a0710acf.png" 
                 alt="QuantaMind Logo" 
                 className="h-8 w-8 object-contain"
               />
