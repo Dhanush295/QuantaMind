@@ -81,22 +81,25 @@ const UseCasesSection = () => {
 
         {/* Tab navigation */}
         <div className="flex flex-col md:flex-row justify-center mb-12 gap-4">
-          {industries.map((industry, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveTab(index)}
-              className={`px-6 py-3 rounded-lg font-medium transition-all ${
-                activeTab === index
-                  ? getColorClasses(industry.color).bg + " text-white"
-                  : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
-              }`}
-            >
-              <div className="flex items-center gap-2">
-                <industry.icon size={20} />
-                {industry.title}
-              </div>
-            </button>
-          ))}
+          {industries.map((industry, index) => {
+            const IconComponent = industry.icon;
+            return (
+              <button
+                key={index}
+                onClick={() => setActiveTab(index)}
+                className={`px-6 py-3 rounded-lg font-medium transition-all ${
+                  activeTab === index
+                    ? getColorClasses(industry.color).bg + " text-white"
+                    : 'bg-gray-800 text-gray-400 hover:bg-gray-700'
+                }`}
+              >
+                <div className="flex items-center gap-2">
+                  <IconComponent size={20} />
+                  {industry.title}
+                </div>
+              </button>
+            );
+          })}
         </div>
 
         {/* Active tab content */}
@@ -107,7 +110,9 @@ const UseCasesSection = () => {
                 <div>
                   <div className="flex items-center gap-4 mb-6">
                     <div className={`w-16 h-16 rounded-lg ${getColorClasses(industries[activeTab].color).bgOpacity} flex items-center justify-center`}>
-                      <industries[activeTab].icon className={`w-8 h-8 ${getColorClasses(industries[activeTab].color).text}`} />
+                      {React.createElement(industries[activeTab].icon, {
+                        className: `w-8 h-8 ${getColorClasses(industries[activeTab].color).text}`
+                      })}
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold">{industries[activeTab].title}</h3>
@@ -133,7 +138,9 @@ const UseCasesSection = () => {
                   <div className="relative w-64 h-64 glassmorphism rounded-xl">
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className={`w-32 h-32 ${getColorClasses(industries[activeTab].color).bgOpacity} rounded-full border-2 ${getColorClasses(industries[activeTab].color).border} flex items-center justify-center animate-pulse-subtle`}>
-                        <industries[activeTab].icon className={getColorClasses(industries[activeTab].color).icon} />
+                        {React.createElement(industries[activeTab].icon, {
+                          className: getColorClasses(industries[activeTab].color).icon
+                        })}
                       </div>
                     </div>
                     
