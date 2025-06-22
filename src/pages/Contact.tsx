@@ -1,11 +1,16 @@
-
 import React, { useRef, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue
+} from "@/components/ui/select";
 import { useToast } from "@/components/ui/use-toast";
 import { Send } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
@@ -32,10 +37,8 @@ const Contact = () => {
 
     try {
       const formData = new FormData(formRef.current!);
-      
-      // Add selected data types to form data
-      formData.append('data_types', selectedDataTypes.join(', '));
       formData.append('industry', selectedIndustry);
+      formData.append('data_types', selectedDataTypes.join(', '));
 
       const res = await fetch("https://formsubmit.co/ajax/dhanush@quantamind.co", {
         method: "POST",
@@ -80,10 +83,8 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Header spacing to prevent overlap with fixed header */}
       <div className="pt-20 sm:pt-24 pb-8 sm:pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-          {/* Title Section */}
           <div className="text-center mb-8 sm:mb-12">
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 leading-tight">
               Join the Private AI Pilot Program
@@ -93,7 +94,6 @@ const Contact = () => {
             </p>
           </div>
 
-          {/* Form Section */}
           <div className="bg-black/20 backdrop-blur-sm rounded-lg border border-white/10 shadow-lg">
             <form
               ref={formRef}
@@ -107,55 +107,26 @@ const Contact = () => {
 
               {/* Company Name */}
               <div className="space-y-2">
-                <Label htmlFor="company" className="text-sm font-medium">
-                  Company Name *
-                </Label>
-                <Input 
-                  id="company"
-                  name="company" 
-                  type="text" 
-                  required 
-                  placeholder="Your company name"
-                  className="w-full"
-                />
+                <Label htmlFor="company">Company Name *</Label>
+                <Input id="company" name="company" required placeholder="Your company name" />
               </div>
 
               {/* Your Name */}
               <div className="space-y-2">
-                <Label htmlFor="name" className="text-sm font-medium">
-                  Your Name *
-                </Label>
-                <Input 
-                  id="name"
-                  name="name" 
-                  type="text" 
-                  required 
-                  placeholder="Your full name"
-                  className="w-full"
-                />
+                <Label htmlFor="name">Your Name *</Label>
+                <Input id="name" name="name" required placeholder="Your full name" />
               </div>
 
-              {/* Work Email */}
+              {/* Email */}
               <div className="space-y-2">
-                <Label htmlFor="email" className="text-sm font-medium">
-                  Work Email *
-                </Label>
-                <Input 
-                  id="email"
-                  name="email" 
-                  type="email" 
-                  required 
-                  placeholder="your@email.com"
-                  className="w-full"
-                />
+                <Label htmlFor="email">Work Email *</Label>
+                <Input id="email" name="email" type="email" required placeholder="your@email.com" />
               </div>
 
               {/* Industry */}
               <div className="space-y-2">
-                <Label htmlFor="industry" className="text-sm font-medium">
-                  What is your industry? *
-                </Label>
-                <Select onValueChange={setSelectedIndustry} required>
+                <Label>What is your industry? *</Label>
+                <Select onValueChange={setSelectedIndustry}>
                   <SelectTrigger className="w-full">
                     <SelectValue placeholder="Select an industry" />
                   </SelectTrigger>
@@ -172,44 +143,34 @@ const Contact = () => {
                 </Select>
               </div>
 
-              {/* Main Challenge */}
+              {/* Challenge */}
               <div className="space-y-2">
-                <Label htmlFor="challenge" className="text-sm font-medium">
-                  In a few words, what is the main challenge you want to solve? *
-                </Label>
-                <p className="text-xs sm:text-sm text-muted-foreground mb-2">
-                  (e.g., "Securely analyze client contracts," or "Predict machine failures on the factory floor.")
+                <Label htmlFor="challenge">Main Challenge *</Label>
+                <p className="text-sm text-muted-foreground mb-1">
+                  (e.g., "Securely analyze contracts" or "Predict machine failures.")
                 </p>
                 <Textarea
                   id="challenge"
                   name="challenge"
                   required
                   placeholder="Describe your main challenge..."
-                  className="min-h-[100px] sm:min-h-[120px] w-full resize-none"
+                  className="min-h-[120px]"
                 />
               </div>
 
               {/* Data Types */}
-              <div className="space-y-3">
-                <Label className="text-sm font-medium">
-                  What type of data would the AI need to work with? *
-                </Label>
-                <p className="text-xs sm:text-sm text-muted-foreground">
-                  (Select all that apply)
-                </p>
-                <div className="space-y-3 sm:space-y-4">
+              <div className="space-y-2">
+                <Label>What type of data would the AI need to work with? *</Label>
+                <p className="text-sm text-muted-foreground">(Select all that apply)</p>
+                <div className="space-y-3">
                   {dataTypes.map((dataType) => (
-                    <div key={dataType} className="flex items-start space-x-3">
+                    <div key={dataType} className="flex items-start gap-3">
                       <Checkbox
                         id={dataType}
                         checked={selectedDataTypes.includes(dataType)}
                         onCheckedChange={(checked) => handleDataTypeChange(dataType, checked as boolean)}
-                        className="mt-0.5 flex-shrink-0"
                       />
-                      <Label
-                        htmlFor={dataType}
-                        className="text-sm leading-relaxed cursor-pointer flex-1"
-                      >
+                      <Label htmlFor={dataType} className="text-sm cursor-pointer">
                         {dataType}
                       </Label>
                     </div>
@@ -219,14 +180,12 @@ const Contact = () => {
 
               {/* Privacy Reason */}
               <div className="space-y-2">
-                <Label htmlFor="privacy_reason" className="text-sm font-medium">
-                  (Optional) Why is a private, offline solution important for this project?
-                </Label>
+                <Label htmlFor="privacy_reason">Why is a private, offline solution important?</Label>
                 <Textarea
                   id="privacy_reason"
                   name="privacy_reason"
-                  placeholder="Explain why privacy and offline capabilities matter for your use case..."
-                  className="min-h-[80px] sm:min-h-[100px] w-full resize-none"
+                  placeholder="Explain why privacy matters for your use case..."
+                  className="min-h-[100px]"
                 />
               </div>
 
@@ -234,18 +193,17 @@ const Contact = () => {
               <div className="pt-4">
                 <Button
                   type="submit"
-                  className="w-full bg-quantminds-grey hover:bg-quantminds-grey/90 text-white font-medium py-3 px-6 text-base transition-colors duration-200"
+                  className="w-full bg-quantminds-grey hover:bg-quantminds-grey/90 text-white"
                   disabled={isSubmitting || !selectedIndustry || selectedDataTypes.length === 0}
                 >
                   {isSubmitting ? (
-                    <span className="flex items-center justify-center gap-2">
-                      <div className="animate-spin rounded-full h-4 w-4 border-2 border-white/30 border-t-white"></div>
+                    <span className="flex items-center gap-2">
+                      <div className="animate-spin h-4 w-4 border-2 border-white/30 border-t-white rounded-full" />
                       Submitting...
                     </span>
                   ) : (
-                    <span className="flex items-center justify-center gap-2">
-                      <Send className="h-4 w-4" /> 
-                      Submit Application
+                    <span className="flex items-center gap-2">
+                      <Send className="h-4 w-4" /> Submit Application
                     </span>
                   )}
                 </Button>
@@ -256,9 +214,7 @@ const Contact = () => {
           {/* Back to Homepage */}
           <div className="text-center mt-8">
             <Link to="/">
-              <Button variant="outline" className="px-6 py-2">
-                Back to Homepage
-              </Button>
+              <Button variant="outline">Back to Homepage</Button>
             </Link>
           </div>
         </div>
