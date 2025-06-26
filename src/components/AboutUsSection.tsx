@@ -78,7 +78,7 @@ const AboutUsSection = () => {
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-blue-600/20 hover:bg-blue-600/30 flex items-center justify-center transition-colors duration-200"
                 >
-                  <Linkedin className="w-6 h-6 text-blue-400 hover:text-blue-300" />
+                  <Linkedin className="w-4 h-4 text-blue-400 hover:text-blue-300" />
                 </a>
               </div>
             </div>
