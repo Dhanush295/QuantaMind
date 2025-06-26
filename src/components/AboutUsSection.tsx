@@ -11,7 +11,7 @@ const AboutUsSection = () => {
       bio: "C++ Backend Developer with expertise in building scalable enterprise systems and leading technical innovation",
       icon: User,
       initials: "D",
-      image: "/lovable-uploads/3a3b3390-fba8-4ee7-be0d-7aad30a171d8.png",
+      image: "/team_img/Dg1_dp.jpg",
       linkedinUrl: "https://www.linkedin.com/in/dhanushg29/"
     },
     {
@@ -20,7 +20,7 @@ const AboutUsSection = () => {
       bio: "Data Science Researcher specializing in AI model optimization and operational excellence",
       icon: Brain,
       initials: "A",
-      image: "/lovable-uploads/d97f1fe1-486c-4552-b2ed-9669a0710acf.png",
+      image: "/team_img/Aanya_dp.JPG",
       linkedinUrl: "https://www.linkedin.com/in/aanya-gowdaa-837475369/"
     },
     {
@@ -29,7 +29,7 @@ const AboutUsSection = () => {
       bio: "Ex-Flipkart Engineer with extensive experience in distributed systems and AI infrastructure at scale",
       icon: Code,
       initials: "C",
-      image: "/lovable-uploads/d97f1fe1-486c-4552-b2ed-9669a0710acf.png",
+      image: "/team_img/chirag.jpg",
       linkedinUrl: "https://www.linkedin.com/in/chirag-v-k-67073b1a3/"
     },
   ];
