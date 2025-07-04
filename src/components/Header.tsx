@@ -74,7 +74,7 @@ const Header = () => {
               className="text-gray-300 hover:text-white transition"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Technology
+              How it works
             </Link>
             <Link 
               to="/industries" 
@@ -84,18 +84,18 @@ const Header = () => {
               Industries
             </Link>
             <a 
-              href="#features" 
+              href="/features" 
               className="text-gray-300 hover:text-white transition"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Features
             </a>
             <a 
-              href="#usecases" 
+              href="/pricing" 
               className="text-gray-300 hover:text-white transition"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Use Cases
+              Pricing
             </a>
             <Link 
               to="/contact" 
