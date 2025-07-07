@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { Link, useNavigate } from 'react-router-dom';
-import { Upload, FileText, Shield, Clock, ArrowLeft } from 'lucide-react';
+import { Upload, FileText, Shield, Clock, ArrowLeft, AlertTriangle } from 'lucide-react';
 
 const LeaseAbstractorUpload = () => {
   const [dragActive, setDragActive] = useState(false);
@@ -101,6 +101,35 @@ const LeaseAbstractorUpload = () => {
             Extract key terms, dates, and conditions from your commercial lease agreements in seconds.
           </p>
         </div>
+
+        {/* Critical Disclaimer */}
+        <Card className="bg-amber-900/20 backdrop-blur-sm border-amber-500/30 mb-8">
+          <CardContent className="p-6">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0">
+                <AlertTriangle className="w-6 h-6 text-amber-400 mt-1" />
+              </div>
+              <div className="space-y-3">
+                <h3 className="text-lg font-semibold text-amber-300">
+                  For Demonstration Purposes Only
+                </h3>
+                <p className="text-amber-100/90 leading-relaxed">
+                  <strong>Please do not upload any sensitive or confidential documents to this public tool.</strong>
+                </p>
+                <p className="text-amber-100/80 leading-relaxed">
+                  This demo shows you the power of our AI. To analyze your real, mission-critical documents with complete privacy and control, contact us to deploy the Enterprise version inside your own secure, offline environment (On-Prem, VPC, or Air-Gapped).
+                </p>
+                <div className="pt-2">
+                  <Link to="/contact">
+                    <Button variant="outline" className="bg-amber-400/10 border-amber-400/30 text-amber-300 hover:bg-amber-400/20 hover:border-amber-400/50">
+                      Contact Us for Enterprise
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Upload Card */}
         <Card className="bg-black/20 backdrop-blur-sm border-white/10 mb-8">
