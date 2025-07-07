@@ -1,10 +1,9 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { Link, useNavigate } from 'react-router-dom';
-import { Upload, FileText, Shield, Clock, ArrowLeft, AlertTriangle } from 'lucide-react';
+import { Upload, FileText, ArrowLeft, AlertTriangle } from 'lucide-react';
 
 const LeaseAbstractorUpload = () => {
   const [dragActive, setDragActive] = useState(false);
@@ -191,39 +190,6 @@ const LeaseAbstractorUpload = () => {
             </div>
           </CardContent>
         </Card>
-
-        {/* Security & Limits Info */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="bg-black/10 backdrop-blur-sm border-white/5">
-            <CardContent className="p-6 text-center">
-              <Shield className="w-8 h-8 text-green-400 mx-auto mb-3" />
-              <h3 className="font-semibold mb-2">Secure Processing</h3>
-              <p className="text-sm text-muted-foreground">
-                Your documents are processed securely and automatically deleted after analysis
-              </p>
-            </CardContent>
-          </Card>
-          
-          <Card className="bg-black/10 backdrop-blur-sm border-white/5">
-            <CardContent className="p-6 text-center">
-              <Clock className="w-8 h-8 text-quantminds-blue mx-auto mb-3" />
-              <h3 className="font-semibold mb-2">Free Tier Limits</h3>
-              <p className="text-sm text-muted-foreground">
-                Analyze up to 3 documents per month • Max 10MB per file
-              </p>
-            </CardContent>
-          </Card>
-          
-          <Card className="bg-black/10 backdrop-blur-sm border-white/5">
-            <CardContent className="p-6 text-center">
-              <FileText className="w-8 h-8 text-quantminds-grey mx-auto mb-3" />
-              <h3 className="font-semibold mb-2">PDF Only</h3>
-              <p className="text-sm text-muted-foreground">
-                Currently supports PDF lease agreements only
-              </p>
-            </CardContent>
-          </Card>
-        </div>
 
         {/* Privacy Policy Link */}
         <div className="text-center mt-8">
