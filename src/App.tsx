@@ -25,6 +25,9 @@ import CloudAITrap from './pages/blogs_page/CloudAITrap';
 import Product from './pages/Product';
 import LeaseAbstractor from './pages/product/LeaseAbstractor';
 import LeaseAbstractorAnalyze from './pages/product/LeaseAbstractorAnalyze';
+import LeaseAbstractorChat from './pages/product/LeaseAbstractorChat';
+import ContractAnalyzerChat from './pages/product/ContractAnalyzerChat';
+import DealAnalyzerChat from './pages/product/DealAnalyzerChat';
 
 const queryClient = new QueryClient();
 
@@ -55,6 +58,9 @@ const App = () => (
           <Route path="/product" element={<Product />} />
           <Route path="/product/lease-abstractor" element={<LeaseAbstractor />} />
           <Route path="/product/lease-abstractor/analyze" element={<LeaseAbstractorAnalyze />} />
+          <Route path="/product/lease-abstractor/chat" element={<LeaseAbstractorChat />} />
+          <Route path="/product/contract-analyzer/chat" element={<ContractAnalyzerChat />} />
+          <Route path="/product/deal-analyzer/chat" element={<DealAnalyzerChat />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

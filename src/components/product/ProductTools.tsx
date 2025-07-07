@@ -13,7 +13,7 @@ const ProductTools = () => {
       subtitle: 'Real Estate',
       description: 'Extract key terms, dates, and conditions from commercial lease agreements instantly.',
       icon: Building,
-      path: '/product/lease-abstractor',
+      path: '/product/lease-abstractor/chat',
       featured: true,
       examples: ['Lease start/end dates', 'Rent escalations', 'Tenant obligations', 'Special provisions']
     },
@@ -23,7 +23,7 @@ const ProductTools = () => {
       subtitle: 'Legal Firms',
       description: 'Analyze contracts for key clauses, risks, and compliance requirements.',
       icon: Scale,
-      path: '/product/contract-analyzer',
+      path: '/product/contract-analyzer/chat',
       featured: false,
       examples: ['Liability clauses', 'Termination conditions', 'Payment terms', 'Risk assessment']
     },
@@ -33,7 +33,7 @@ const ProductTools = () => {
       subtitle: 'M&A Advisory',
       description: 'Review transaction documents for critical deal terms and potential issues.',
       icon: TrendingUp,
-      path: '/product/deal-analyzer',
+      path: '/product/deal-analyzer/chat',
       featured: false,
       examples: ['Valuation metrics', 'Deal structure', 'Due diligence items', 'Risk factors']
     }
