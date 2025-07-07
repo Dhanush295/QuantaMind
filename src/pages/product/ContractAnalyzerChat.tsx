@@ -9,7 +9,7 @@ const ContractAnalyzerChat = () => {
     'termination': 'Either party may terminate with 30 days written notice. Immediate termination allowed for material breach.',
     'payment': 'Payment terms are Net 30 days from invoice date, with 1.5% monthly late fees after 30 days.',
     'risk': 'Key risks identified: unlimited liability exposure, broad indemnification requirements, and automatic renewal clause.',
-    'default': 'I've analyzed your contract and identified key clauses including payment terms, liability provisions, and termination conditions. What specific aspect would you like me to review?'
+    'default': 'I\'ve analyzed your contract and identified key clauses including payment terms, liability provisions, and termination conditions. What specific aspect would you like me to review?'
   };
 
   const suggestedQuestions = [
