@@ -22,6 +22,9 @@ import TermsOfService from "./pages/TermsOfService";
 import CookiePolicy from "./pages/CookiePolicy";
 import Security from "./pages/Security";
 import CloudAITrap from './pages/blogs_page/CloudAITrap';
+import Product from './pages/Product';
+import LeaseAbstractor from './pages/product/LeaseAbstractor';
+import LeaseAbstractorAnalyze from './pages/product/LeaseAbstractorAnalyze';
 
 const queryClient = new QueryClient();
 
@@ -49,6 +52,9 @@ const App = () => (
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           <Route path="/security" element={<Security />} />
           <Route path="/blog/cloud-ai-trap" element={<CloudAITrap />} />
+          <Route path="/product" element={<Product />} />
+          <Route path="/product/lease-abstractor" element={<LeaseAbstractor />} />
+          <Route path="/product/lease-abstractor/analyze" element={<LeaseAbstractorAnalyze />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
