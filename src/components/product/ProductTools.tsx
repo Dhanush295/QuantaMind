@@ -127,17 +127,6 @@ const ProductTools = () => {
             );
           })}
         </div>
-        
-        <div className="text-center mt-12 p-6 glassmorphism rounded-xl">
-          <p className="text-sm text-muted-foreground mb-4">
-            Need unlimited processing or enterprise-grade security?
-          </p>
-          <Link to="/contact">
-            <Button variant="outline" size="lg">
-              Contact Sales for Enterprise Solutions
-            </Button>
-          </Link>         
-        </div>
       </div>
     </section>
   );
