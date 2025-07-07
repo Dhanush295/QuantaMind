@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from 'react-router-dom';
-import { Building, Scale, TrendingUp } from 'lucide-react';
+import { Building, Scale, TrendingUp, AlertTriangle } from 'lucide-react';
 
 const ProductTools = () => {
   const tools = [
@@ -42,6 +42,35 @@ const ProductTools = () => {
   return (
     <section className="py-16 px-4">
       <div className="container mx-auto max-w-6xl">
+        {/* Critical Disclaimer */}
+        <Card className="bg-amber-900/20 backdrop-blur-sm border-amber-500/30 mb-12">
+          <CardContent className="p-6">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0">
+                <AlertTriangle className="w-6 h-6 text-amber-400 mt-1" />
+              </div>
+              <div className="space-y-3">
+                <h3 className="text-lg font-semibold text-amber-300">
+                  For Demonstration Purposes Only
+                </h3>
+                <p className="text-amber-100/90 leading-relaxed">
+                  <strong>Please do not upload any sensitive or confidential documents to this public tool.</strong>
+                </p>
+                <p className="text-amber-100/80 leading-relaxed">
+                  This demo shows you the power of our AI. To analyze your real, mission-critical documents with complete privacy and control, contact us to deploy the Enterprise version inside your own secure, offline environment (On-Prem, VPC, or Air-Gapped).
+                </p>
+                <div className="pt-2">
+                  <Link to="/contact">
+                    <Button variant="outline" className="bg-amber-400/10 border-amber-400/30 text-amber-300 hover:bg-amber-400/20 hover:border-amber-400/50">
+                      Contact Us for Enterprise
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {tools.map((tool) => {
             const IconComponent = tool.icon;
@@ -107,7 +136,7 @@ const ProductTools = () => {
             <Button variant="outline" size="lg">
               Contact Sales for Enterprise Solutions
             </Button>
-          </Link>
+          </Link>         
         </div>
       </div>
     </section>
