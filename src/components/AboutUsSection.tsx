@@ -16,7 +16,7 @@ const AboutUsSection = () => {
     },
     {
       name: "Aanya",
-      title: "Chief Operating Officer",
+      title: "COO & Co-Founder",
       bio: "Data Science Researcher specializing in AI model optimization and operational excellence",
       icon: Brain,
       initials: "A",
@@ -25,7 +25,7 @@ const AboutUsSection = () => {
     },
     {
       name: "Chirag",
-      title: "Chief Technology Officer",
+      title: "CTO & Co-Founder",
       bio: "Ex-Flipkart Engineer with extensive experience in distributed systems and AI infrastructure at scale",
       icon: Code,
       initials: "C",
