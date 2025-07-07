@@ -2,7 +2,7 @@
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ProductHero from '@/components/product/ProductHero';
+
 import ProductTools from '@/components/product/ProductTools';
 
 const Product = () => {
@@ -11,7 +11,7 @@ const Product = () => {
       <Header />
       
       <main className="flex-grow pt-20">
-        <ProductHero />
+        
         <ProductTools />
       </main>
       
