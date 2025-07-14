@@ -8,12 +8,10 @@ const SolutionSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Our Platform <span className="text-gradient">Brings the AI to Your Data.</span>
+            We Bring the AI to Your Data. <span className="text-gradient">Not the Other Way Around.</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Quantamind is different. We install a custom "AI brain" that runs directly on your own 
-            internal servers or computers. It never connects to the internet. Your data is processed 
-            securely inside your own fortress, never leaving your control.
+            Quantamind was founded on a simple, powerful principle: you should never have to sacrifice security for intelligence. Our platform deploys custom-trained AI agents that run entirely within your own private infrastructure, giving you the best of both worlds.
           </p>
         </div>
 
@@ -63,25 +61,25 @@ const SolutionSection = () => {
         {/* Benefits grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center p-6 glassmorphism rounded-xl">
-            <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Shield size={24} className="text-green-500" />
-            </div>
-            <h3 className="text-lg font-semibold mb-2">100% Offline Processing</h3>
-            <p className="text-gray-400">Your data never leaves your secure environment. Zero external connections.</p>
-          </div>
-          <div className="text-center p-6 glassmorphism rounded-xl">
             <div className="w-16 h-16 bg-quantminds-blue/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Brain size={24} className="text-quantminds-blue" />
+              <Lock size={24} className="text-quantminds-blue" />
             </div>
-            <h3 className="text-lg font-semibold mb-2">Custom AI Brain</h3>
-            <p className="text-gray-400">Tailored specifically for your business needs and trained on your data.</p>
+            <h3 className="text-lg font-semibold mb-2">Absolute Control</h3>
+            <p className="text-gray-400">Your data never leaves your building.</p>
           </div>
           <div className="text-center p-6 glassmorphism rounded-xl">
             <div className="w-16 h-16 bg-quantminds-grey/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Server size={24} className="text-quantminds-grey" />
+              <Brain size={24} className="text-quantminds-grey" />
             </div>
-            <h3 className="text-lg font-semibold mb-2">Your Infrastructure</h3>
-            <p className="text-gray-400">Runs on your existing servers, workstations, or dedicated hardware.</p>
+            <h3 className="text-lg font-semibold mb-2">Custom Expertise</h3>
+            <p className="text-gray-400">Our agents become experts on your business, not a global model.</p>
+          </div>
+          <div className="text-center p-6 glassmorphism rounded-xl">
+            <div className="w-16 h-16 bg-quantminds-blue/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Server size={24} className="text-quantminds-blue" />
+            </div>
+            <h3 className="text-lg font-semibold mb-2">Turnkey Solution</h3>
+            <p className="text-gray-400">We deliver a finished product, not a complex project.</p>
           </div>
         </div>
       </div>

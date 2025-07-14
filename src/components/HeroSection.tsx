@@ -26,18 +26,18 @@ const HeroSection = () => {
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
-             <span className="text-gradient">AI for the Enterprise.</span> <br />
-             Private by Design.
+             Your Data is Too Valuable <br />
+             <span className="text-gradient">for the Cloud</span>
            </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8">
-            We build custom AI agents that run 100% offline, inside your own secure walls. Get the power of AI with zero risk to your sensitive data.
+            Your Business is Too Ambitious for the Sidelines. Quantamind delivers the power of custom AI inside your own secure environment. No compromises. No cloud risk.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Link to="/contact">
               <Button size="lg" className="font-medium bg-quantminds-grey hover:bg-quantminds-grey/90">
-                Join Our Founding Partner Program
+                Schedule Your Demo
               </Button>
             </Link>
           </div>

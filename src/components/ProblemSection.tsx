@@ -8,47 +8,36 @@ const ProblemSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            You Want to Use AI. <span className="text-red-400">You Can't Risk Your Data.</span>
+            The Choice You <span className="text-gradient">Shouldn't Have to Make</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Every business wants the efficiency of AI, but today's tools create an unacceptable risk. 
-            Using cloud-based AI means sending your most sensitive client information, patient records, 
-            or intellectual property to a third-party server. For industries built on trust, this is a non-starter.
+            Every modern business wants to leverage AI to analyze data, automate work, and gain a competitive edge. But for industries built on confidentiality—law, finance, healthcare, defense—a critical paradox has emerged.
           </p>
         </div>
 
-        {/* Visual representation */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
-          {/* Secure building */}
-          <div className="flex flex-col items-center">
-            <div className="w-32 h-32 bg-quantminds-grey/20 rounded-lg border-2 border-quantminds-grey/40 flex flex-col items-center justify-center mb-4 relative">
-              <FileText size={32} className="text-quantminds-grey mb-2" />
-              <div className="text-xs text-center text-quantminds-grey">Your Sensitive<br />Data</div>
-              <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                <span className="text-xs text-white font-bold">✓</span>
+        <div className="glassmorphism p-8 rounded-xl mb-12">
+          <div className="text-center mb-8">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Using powerful cloud-based AI means sending your most sensitive data to a third party. It means risking your intellectual property, breaking client privilege, and navigating a minefield of compliance issues.
+            </p>
+          </div>
+          
+          <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-6 mb-8">
+            <h3 className="text-xl font-bold text-red-400 mb-4 text-center">So you're left with a choice:</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="text-center p-4 bg-red-500/5 rounded-lg">
+                <h4 className="font-semibold text-red-400 mb-2">Innovate and accept the security risks?</h4>
+              </div>
+              <div className="text-center p-4 bg-red-500/5 rounded-lg">
+                <h4 className="font-semibold text-red-400 mb-2">Stay Secure and fall behind the competition?</h4>
               </div>
             </div>
-            <span className="text-sm text-gray-400">Your Secure Environment</span>
           </div>
-
-          {/* Arrow */}
-          <div className="flex items-center gap-4">
-            <ArrowRight size={24} className="text-red-400 lg:block hidden" />
-            <div className="lg:hidden w-full h-0.5 bg-red-400"></div>
-          </div>
-
-          {/* Cloud with X */}
-          <div className="flex flex-col items-center relative">
-            <div className="w-32 h-32 bg-blue-500/20 rounded-lg border-2 border-blue-500/40 flex flex-col items-center justify-center mb-4 relative">
-              <Cloud size={32} className="text-blue-400 mb-2" />
-              <div className="text-xs text-center text-blue-400">Third-Party<br />Cloud AI</div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 rounded-full bg-red-500/20 border-4 border-red-500 flex items-center justify-center">
-                  <X size={32} className="text-red-500" />
-                </div>
-              </div>
-            </div>
-            <span className="text-sm text-gray-400">Unacceptable Risk</span>
+          
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-quantminds-blue mb-2">
+              At Quantamind, we believe this is a false choice.
+            </h3>
           </div>
         </div>
 

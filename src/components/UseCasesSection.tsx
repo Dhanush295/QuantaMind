@@ -10,56 +10,56 @@ const UseCasesSection = () => {
       title: "Professional Services",
       industries: [
         {
-          title: "Law Firms",
+          title: "Legal & M&A",
           icon: Scale,
-          description: "Securely analyze case files and contracts without risking attorney-client privilege.",
+          description: "Analyze contracts and due diligence data with absolute attorney-client privilege.",
           color: "quantminds-grey"
         },
         {
-          title: "Healthcare", 
+          title: "Healthcare & Life Sciences", 
           icon: Heart,
-          description: "Process live diagnostic data from medical devices with zero latency and full HIPAA compliance.",
+          description: "Process patient data and proprietary research with guaranteed HIPAA compliance.",
           color: "quantminds-blue"
         },
         {
           title: "Finance & Accounting",
           icon: Building, 
-          description: "Run analysis on sensitive client financial data with guaranteed privacy and regulatory compliance.",
+          description: "Detect fraud and analyze financial statements without exposing client data.",
           color: "quantminds-grey"
         },
         {
-          title: "Corporate Strategy & M&A",
-          icon: TrendingUp,
-          description: "Analyze confidential deal documents, financials, and intellectual property in a secure, air-gapped environment.",
+          title: "Aerospace, Defense & Manufacturing",
+          icon: Plane,
+          description: "Analyze classified designs and operational data in secure, air-gapped facilities.",
           color: "quantminds-blue"
         }
       ]
     },
     {
-      title: "Industrial & Edge Computing",
+      title: "Deployment Options",
       industries: [
         {
-          title: "Manufacturing & IoT",
-          icon: Factory,
-          description: "Run predictive maintenance AI directly on factory machinery to detect failures in real-time, even with unreliable Wi-Fi.",
+          title: "Professional Plan (Secure Cloud)",
+          icon: Shield,
+          description: "Think of this like a private, armored car service. We deploy your custom AI agent in a dedicated, isolated cloud instance that belongs only to you. Zero Data Retention & No-Training Guarantee.",
           color: "quantminds-blue"
         },
         {
-          title: "Defense & Aerospace",
-          icon: Plane,
-          description: "Deploy autonomous navigation and data analysis on satellites, drones, and other mission-critical systems that must operate without a cloud connection.",
+          title: "Enterprise Plan (Your Private Environment)",
+          icon: Factory,
+          description: "Think of this like a high-tech analysis lab built inside your own secure vault. We deploy the Quantamind Engine directly onto your on-premise servers or into your existing private cloud (VPC).",
           color: "quantminds-grey"
         },
         {
-          title: "Energy & Infrastructure",
+          title: "Air-Gapped Deployment",
           icon: Zap,
-          description: "Monitor remote assets like pipelines or turbines with on-device AI that works in locations with no internet access.",
+          description: "Can run completely offline or in an air-gapped environment. The only choice for mission-critical data, classified information, and priceless intellectual property.",
           color: "quantminds-blue"
         },
         {
-          title: "Consumer Electronics",
-          icon: Smartphone,
-          description: "Enable smart, on-device features—like real-time voice recognition or health monitoring—without sending user data to the cloud, ensuring absolute privacy.",
+          title: "Compliance Ready",
+          icon: FileText,
+          description: "Meets Major Compliance Standards (SOC 2, HIPAA). Perfect for getting started quickly with sensitive, but not top-secret, data.",
           color: "quantminds-grey"
         }
       ]
@@ -90,10 +90,10 @@ const UseCasesSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Built for Industries Where <span className="text-gradient">Trust and Reliability are Everything</span>
+            Built for the <span className="text-gradient">Most Demanding Data Environments</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-            From protecting client privilege in a law firm to enabling real-time decisions on a factory floor, our private AI platform is designed for the world's most demanding environments.
+            We provide solutions for the most demanding data environments: Legal & M&A, Finance & Accounting, Healthcare & Life Sciences, Aerospace, Defense & Manufacturing.
           </p>
         </div>
 
