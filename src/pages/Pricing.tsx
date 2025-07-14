@@ -1,71 +1,95 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Check, Star, Zap, Shield, Code, Users, Rocket, Building } from 'lucide-react';
+import { Check, Star, Zap, Shield, Code, Users, Rocket, Building, Cloud, Server, HardDrive, DollarSign, CalendarDays, Briefcase } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Pricing = () => {
   const saasPlans = [
     {
       name: "Professional Plan",
-      subtitle: "Secure Cloud",
-      price: "$250",
+      subtitle: "Deploy in Your Secure Cloud",
+      price: "$2,500",
       period: "/month",
-      yearlyPrice: "$2500",
-      yearlySavings: "$500",
+      yearlyPrice: "$25,000/year",
       setupFee: "$10,000",
-      description: "Teams who need a secure, managed AI solution quickly, without managing their own hardware",
-      howItWorks: "We deploy your custom AI agent in a dedicated, private cloud instance for you",
+      pilotPrice: "$9,000",
+      bestFor: "Small firms or agile teams who want private AI without hardware headaches",
+      description: "Fastest Time to Value — deploy in 1 week",
+      icon: Cloud,
       features: [
-        "One-time setup & model training",
-        "Onboarding for up to 25 users",
-        "Secure cloud hosting",
-        "All model updates included",
-        "Standard support",
-        "Dedicated private cloud instance"
+        "1 custom AI agent (e.g., Contract Analyzer, Policy Summarizer)",
+        "Hosted in your secure Azure or AWS VPC",
+        "Zero data retention — all processing inside your environment",
+        "Pre-trained model, RAG-based architecture",
+        "Standard support & software updates"
+      ],
+      addOns: [
+        "Additional AI agents: +$1,500/month",
+        "SSO / Microsoft 365 Integration: +$500/month",
+        "AI Usage Insights Dashboard: +$3,000/year"
       ],
       cta: "Get Started",
-      isPopular: false
-    },
-    {
-      name: "Enterprise Plan",
-      subtitle: "Your Private Environment",
-      price: "$600",
-      period: "/month",
-      yearlyPrice: "$6500",
-      yearlySavings: "$700",
-      setupFee: "$25,000",
-      description: "Regulated industries that require absolute data control and offline capability",
-      howItWorks: "We deploy the Quantamind Engine directly inside your own infrastructure (your on-premise server or your existing private cloud/VPC)",
-      features: [
-        "Custom model training & deployment",
-        "Onboarding for up to 100 users",
-        "Private infrastructure deployment",
-        "All model updates included",
-        "Dedicated support",
-        "Complete data control & offline capability"
-      ],
-      cta: "Contact Sales",
       isPopular: true
     },
     {
-      name: "Aegis Plan",
-      subtitle: "Strategic Partnership",
-      price: "Custom",
-      period: "Pricing",
-      description: "Large-scale or mission-critical deployments requiring multiple custom agents, bespoke integrations, or fully air-gapped support",
-      howItWorks: "A fully tailored partnership where our team works with yours to build and maintain a comprehensive private AI solution",
+      name: "Enterprise Plan",
+      subtitle: "Deploy on Your Infrastructure",
+      price: "$6,000",
+      period: "/month",
+      yearlyPrice: "$65,000/year",
+      setupFee: "$25,000",
+      bestFor: "Enterprises with multiple locations and full IT control",
+      description: "Full Control + Compliance — ideal for law, finance, defense",
+      icon: Server,
       features: [
-        "Multiple custom agents",
-        "Bespoke integrations",
-        "Technical account manager",
-        "SLA guarantees",
-        "Unlimited users",
-        "Fully air-gapped support"
+        "On-premise deployment (your GPU servers)",
+        "1 full-featured Quantamind AI agent (custom-trained)",
+        "Secure container with RAG + LLM + vector DB",
+        "\"White-glove\" remote onboarding with your IT team",
+        "Dedicated support and upgrade channel"
+      ],
+      addOns: [
+        "Custom fine-tuning: +$25,000/model",
+        "Internal compliance toolkit (audit logging): +$5,000/year",
+        "Air-gapped update delivery: +$3,000/year"
+      ],
+      cta: "Contact Sales",
+      isPopular: false
+    },
+    {
+      name: "Quantamind Vault™",
+      subtitle: "Managed GPU Pod",
+      price: "$95,000",
+      period: "/year",
+      hardwarePrice: "$15,000–35,000",
+      bestFor: "Mid-sized teams needing secure, on-prem AI without internal GPU expertise",
+      description: "Just plug it in — we handle the rest",
+      icon: HardDrive,
+      features: [
+        "Pre-configured sealed AI appliance with NVIDIA GPU",
+        "Fully loaded with your custom AI agent",
+        "Local RAG + LLM inference — no cloud dependency",
+        "Remote monitoring & update support",
+        "1-year hardware warranty & software license"
+      ],
+      addOns: [
+        "On-site installation: +$3,000",
+        "Redundant backup unit: +$10,000",
+        "Factory reset & redeployment: +$5,000"
       ],
       cta: "Contact Sales",
       isPopular: false
     }
+  ];
+
+  const addOnsTable = [
+    { feature: "Additional AI Agent (any plan)", price: "$1,500/month" },
+    { feature: "SSO Integration", price: "$500/month" },
+    { feature: "Compliance Toolkit (HIPAA, ITAR)", price: "$5,000/year" },
+    { feature: "24/7 Premium Support SLA", price: "$10,000/year" },
+    { feature: "AI Usage Analytics & Monitoring", price: "$3,000/year" },
+    { feature: "Custom Model Fine-Tuning", price: "From $25,000/model" }
   ];
 
   const allPlansFeatures = [
@@ -176,28 +200,41 @@ const Pricing = () => {
                   )}
                   
                   <div className="text-center mb-8">
+                    <div className="flex justify-center mb-4">
+                      <plan.icon className="w-12 h-12 text-quantminds-purple" />
+                    </div>
                     <h3 className="text-2xl font-bold mb-1">{plan.name}</h3>
                     {plan.subtitle && (
-                      <p className="text-sm text-quantminds-purple font-medium mb-4">({plan.subtitle})</p>
+                      <p className="text-sm text-quantminds-purple font-medium mb-4">{plan.subtitle}</p>
+                    )}
+                    {plan.bestFor && (
+                      <p className="text-xs text-gray-400 mb-4 italic">Best for: {plan.bestFor}</p>
                     )}
                     <div className="mb-4">
                       <span className="text-4xl font-bold text-quantminds-purple">{plan.price}</span>
                       <span className="text-gray-400">{plan.period}</span>
                       {plan.yearlyPrice && (
                         <div className="text-sm text-gray-400 mt-2">
-                          {plan.yearlyPrice}/year (Save {plan.yearlySavings})
+                          {plan.yearlyPrice}
                         </div>
                       )}
                       {plan.setupFee && (
                         <div className="text-sm text-orange-400 mt-2">
-                          + {plan.setupFee} one-time setup
+                          One-time Setup: {plan.setupFee}
+                        </div>
+                      )}
+                      {plan.hardwarePrice && (
+                        <div className="text-sm text-orange-400 mt-2">
+                          Hardware + Setup: {plan.hardwarePrice}
+                        </div>
+                      )}
+                      {plan.pilotPrice && (
+                        <div className="text-sm text-green-400 mt-2">
+                          🧪 Pilot Program: {plan.pilotPrice}
                         </div>
                       )}
                     </div>
                     <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
-                    {plan.howItWorks && (
-                      <p className="text-gray-400 text-xs italic">{plan.howItWorks}</p>
-                    )}
                   </div>
                   
                   <ul className="space-y-4 mb-8">
@@ -222,66 +259,42 @@ const Pricing = () => {
             </div>
           </div>
 
-          {/* SDK/Device Licensing Section */}
+          {/* Add-Ons & Custom Options Section */}
           <div className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                🔧 Device Licensing
+                Add-Ons & Custom Options
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Embedded AI for devices and sensors
+                Enhance any plan with additional features and services
               </p>
             </div>
 
-            <div className="glassmorphism p-8 md:p-12 rounded-xl">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <div className="mb-8">
-                    <div className="text-4xl font-bold text-quantminds-purple mb-2">$5–$50</div>
-                    <div className="text-xl text-gray-300">per device</div>
-                    <div className="text-gray-400">Based on usage and features</div>
-                  </div>
-                  
-                  <div className="grid grid-cols-2 gap-6 mb-8">
-                    <div className="text-center">
-                      <Code className="w-8 h-8 text-quantminds-purple mx-auto mb-2" />
-                      <div className="font-semibold">C++ Based</div>
-                      <div className="text-sm text-gray-400">No dependencies</div>
-                    </div>
-                    <div className="text-center">
-                      <Zap className="w-8 h-8 text-quantminds-purple mx-auto mb-2" />
-                      <div className="font-semibold">Real-time</div>
-                      <div className="text-sm text-gray-400">Works offline</div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div>
-                  <h3 className="text-xl font-semibold mb-4">Perfect for:</h3>
-                  <ul className="space-y-3 mb-8">
-                    <li className="flex items-center gap-3">
-                      <Check className="w-5 h-5 text-quantminds-purple flex-shrink-0" />
-                      <span className="text-gray-300">Wearables & sensors</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <Check className="w-5 h-5 text-quantminds-purple flex-shrink-0" />
-                      <span className="text-gray-300">Medical devices</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <Check className="w-5 h-5 text-quantminds-purple flex-shrink-0" />
-                      <span className="text-gray-300">Industrial IoT</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <Check className="w-5 h-5 text-quantminds-purple flex-shrink-0" />
-                      <span className="text-gray-300">Automotive & robotics</span>
-                    </li>
-                  </ul>
-                  <Link to="/contact" className="w-full">
-                  <button className="bg-quantminds-purple hover:bg-quantminds-purple/90 text-white px-8 py-3 rounded-lg font-semibold transition w-full">
-                    Get Quote
+            <div className="glassmorphism p-8 rounded-xl">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-gray-700">
+                      <th className="text-left py-4 px-6 text-lg font-semibold text-quantminds-purple">Feature</th>
+                      <th className="text-right py-4 px-6 text-lg font-semibold text-quantminds-purple">Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {addOnsTable.map((item, index) => (
+                      <tr key={index} className="border-b border-gray-800 hover:bg-gray-900/30 transition">
+                        <td className="py-4 px-6 text-gray-300">{item.feature}</td>
+                        <td className="py-4 px-6 text-right text-gray-300 font-semibold">{item.price}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div className="mt-8 text-center">
+                <Link to="/contact">
+                  <button className="bg-quantminds-purple hover:bg-quantminds-purple/90 text-white px-8 py-3 rounded-lg font-semibold transition">
+                    Discuss Custom Options
                   </button>
-                  </Link>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
