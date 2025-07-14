@@ -35,7 +35,7 @@ const Pricing = () => {
       yearlyPrice: "$6500",
       yearlySavings: "$700",
       setupFee: "$25,000",
-      description: "Regulated industries (Law, Finance, Healthcare) that require absolute data control and offline capability",
+      description: "Regulated industries that require absolute data control and offline capability",
       howItWorks: "We deploy the Quantamind Engine directly inside your own infrastructure (your on-premise server or your existing private cloud/VPC)",
       features: [
         "Custom model training & deployment",
