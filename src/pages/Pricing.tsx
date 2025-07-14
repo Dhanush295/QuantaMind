@@ -7,48 +7,61 @@ import { Link } from 'react-router-dom';
 const Pricing = () => {
   const saasPlans = [
     {
-      name: "Starter",
-      price: "$99",
+      name: "Professional Plan",
+      subtitle: "Secure Cloud",
+      price: "$2,500",
       period: "/month",
-      description: "For small businesses",
+      yearlyPrice: "$25,000",
+      yearlySavings: "$5,000",
+      setupFee: "$10,000",
+      description: "Teams who need a secure, managed AI solution quickly, without managing their own hardware",
+      howItWorks: "We deploy your custom AI agent in a dedicated, private cloud instance for you",
       features: [
-        "1 custom agent",
-        "Basic support",
-        "Secure deployment",
-        "White-labeled",
-        "GDPR/HIPAA ready"
+        "One-time setup & model training",
+        "Onboarding for up to 25 users",
+        "Secure cloud hosting",
+        "All model updates included",
+        "Standard support",
+        "Dedicated private cloud instance"
       ],
       cta: "Get Started",
       isPopular: false
     },
     {
-      name: "Pro",
-      price: "$299",
+      name: "Enterprise Plan",
+      subtitle: "Your Private Environment",
+      price: "$6,000",
       period: "/month",
-      description: "For growing teams",
+      yearlyPrice: "$65,000",
+      yearlySavings: "$7,000",
+      setupFee: "$25,000",
+      description: "Regulated industries (Law, Finance, Healthcare) that require absolute data control and offline capability",
+      howItWorks: "We deploy the Quantamind Engine directly inside your own infrastructure (your on-premise server or your existing private cloud/VPC)",
       features: [
-        "Up to 3 agents",
-        "Full customization",
-        "Analytics dashboard",
-        "Priority support",
-        "Advanced deployment",
-        "Priority updates"
+        "Custom model training & deployment",
+        "Onboarding for up to 100 users",
+        "Private infrastructure deployment",
+        "All model updates included",
+        "Dedicated support",
+        "Complete data control & offline capability"
       ],
-      cta: "Get Started",
+      cta: "Contact Sales",
       isPopular: true
     },
     {
-      name: "Enterprise",
+      name: "Aegis Plan",
+      subtitle: "Strategic Partnership",
       price: "Custom",
-      period: "",
-      description: "For large organizations",
+      period: "Pricing",
+      description: "Large-scale or mission-critical deployments requiring multiple custom agents, bespoke integrations, or fully air-gapped support",
+      howItWorks: "A fully tailored partnership where our team works with yours to build and maintain a comprehensive private AI solution",
       features: [
-        "Unlimited agents",
-        "On-premise setup",
+        "Multiple custom agents",
+        "Bespoke integrations",
+        "Technical account manager",
         "SLA guarantees",
-        "Dedicated onboarding",
-        "24/7 support",
-        "Custom integrations"
+        "Unlimited users",
+        "Fully air-gapped support"
       ],
       cta: "Contact Sales",
       isPopular: false
@@ -163,12 +176,28 @@ const Pricing = () => {
                   )}
                   
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+                    <h3 className="text-2xl font-bold mb-1">{plan.name}</h3>
+                    {plan.subtitle && (
+                      <p className="text-sm text-quantminds-purple font-medium mb-4">({plan.subtitle})</p>
+                    )}
                     <div className="mb-4">
                       <span className="text-4xl font-bold text-quantminds-purple">{plan.price}</span>
                       <span className="text-gray-400">{plan.period}</span>
+                      {plan.yearlyPrice && (
+                        <div className="text-sm text-gray-400 mt-2">
+                          {plan.yearlyPrice}/year (Save {plan.yearlySavings})
+                        </div>
+                      )}
+                      {plan.setupFee && (
+                        <div className="text-sm text-orange-400 mt-2">
+                          + {plan.setupFee} one-time setup
+                        </div>
+                      )}
                     </div>
-                    <p className="text-gray-300">{plan.description}</p>
+                    <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
+                    {plan.howItWorks && (
+                      <p className="text-gray-400 text-xs italic">{plan.howItWorks}</p>
+                    )}
                   </div>
                   
                   <ul className="space-y-4 mb-8">
