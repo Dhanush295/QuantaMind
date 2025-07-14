@@ -1,7 +1,8 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { Check, Star, Zap, Shield, Code, Users, Rocket, Building, Cloud, Server, HardDrive, DollarSign, CalendarDays, Briefcase } from 'lucide-react';
+import {
+  Check, Star, Rocket, Cloud, Server, HardDrive
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Pricing = () => {
@@ -9,7 +10,7 @@ const Pricing = () => {
     {
       name: "Professional Plan",
       subtitle: "The fastest way to deploy a secure AI solution",
-      price: "$2,500",
+      price: "$200",
       period: "/month",
       bestFor: "Agile teams and mid-sized businesses who want private AI without managing hardware",
       deployment: "Runs in Your Secure Cloud (VPC)",
@@ -22,7 +23,7 @@ const Pricing = () => {
     {
       name: "Enterprise Plan",
       subtitle: "The gold standard for absolute data control and security",
-      price: "$85,000",
+      price: "$50,000",
       period: "/year",
       bestFor: "Regulated industries and large enterprises with their own IT infrastructure",
       deployment: "Runs On Your Private Servers",
@@ -35,7 +36,7 @@ const Pricing = () => {
     {
       name: "Quantamind Vault™",
       subtitle: "The power of on-premise AI with zero IT burden",
-      price: "$120,000",
+      price: "$85,000",
       period: "/year",
       bestFor: "Companies that need offline security but don't have the staff to manage GPU servers",
       deployment: "A Pre-Configured AI Appliance",
@@ -57,7 +58,7 @@ const Pricing = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background text-foreground">
       <Header />
-      
+
       <main className="flex-grow">
         <div className="max-w-7xl mx-auto px-4 py-16">
           {/* Header */}
@@ -78,7 +79,7 @@ const Pricing = () => {
                 <span className="font-semibold">Limited Offer</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-quantminds-purple">
-                 Pilot Program
+                Pilot Program
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Join 20 founding partners and get exclusive benefits
@@ -92,7 +93,7 @@ const Pricing = () => {
                   Only 20 spots
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div>
                   <h3 className="text-2xl font-bold mb-6">What You Get:</h3>
@@ -115,14 +116,14 @@ const Pricing = () => {
                     </li>
                   </ul>
                 </div>
-                
+
                 <div className="text-center">
                   <div className="bg-gradient-to-br from-quantminds-purple to-quantminds-blue p-8 rounded-xl mb-6">
                     <div className="text-4xl font-bold text-white mb-2">FREE</div>
                     <div className="text-white/80">Development</div>
                   </div>
                   <Link to="/contact" className="w-full">
-                    <button className="bg-quantminds-purple hover:bg-quantminds-purple/90 text-white px-8 py-4 rounded-lg text-lg font-semibold transition w-full">
+                    <button className="bg-quantminds-purple hover:bg-quantminds-purple/90 text-white px-8 py-4 rounded-lg text-lg font-semibold transition w-full border-2 border-quantminds-purple">
                       Join Pilot Program
                     </button>
                   </Link>
@@ -136,13 +137,13 @@ const Pricing = () => {
           <div className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                 SaaS Plans
+                SaaS Plans
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
                 Scalable AI solutions for businesses
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {saasPlans.map((plan, index) => (
                 <div key={index} className={`glassmorphism p-8 rounded-xl relative ${plan.isPopular ? 'ring-2 ring-quantminds-purple scale-105' : ''}`}>
@@ -153,21 +154,21 @@ const Pricing = () => {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <div className="flex justify-center mb-4">
                       <plan.icon className="w-12 h-12 text-quantminds-purple" />
                     </div>
                     <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                     <p className="text-sm text-gray-400 mb-6 italic">{plan.subtitle}</p>
-                    
+
                     <div className="mb-6">
                       <div className="text-3xl font-bold text-quantminds-purple mb-1">
                         Starting at {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="space-y-4 mb-8">
                     <div>
                       <p className="text-sm font-semibold text-gray-300 mb-1">Best for:</p>
@@ -186,14 +187,17 @@ const Pricing = () => {
                       <p className="text-sm text-gray-400">{plan.security}</p>
                     </div>
                   </div>
+
                   <Link to="/contact" className="w-full">
-                  <button className={`w-full py-3 rounded-lg font-semibold transition ${
-                    plan.isPopular 
-                      ? 'bg-quantminds-purple hover:bg-quantminds-purple/90 text-white' 
-                      : 'border-2 border-quantminds-purple text-quantminds-purple hover:bg-quantminds-purple hover:text-white'
-                  }`}>
-                    {plan.cta}
-                  </button>
+                    <button
+                      className={`w-full py-3 rounded-lg font-semibold transition border-2 ${
+                        plan.isPopular
+                          ? 'bg-quantminds-purple hover:bg-quantminds-purple/90 text-white border-quantminds-purple'
+                          : 'text-quantminds-purple border-quantminds-purple hover:bg-quantminds-purple hover:text-white'
+                      }`}
+                    >
+                      {plan.cta}
+                    </button>
                   </Link>
                 </div>
               ))}
@@ -210,16 +214,15 @@ const Pricing = () => {
                 All plans can be tailored with additional features like SSO integration, premium support SLAs, and custom-built agents.
               </p>
               <Link to="/contact">
-                <button className="bg-quantminds-purple hover:bg-quantminds-purple/90 text-white px-8 py-4 rounded-lg text-lg font-semibold transition">
+                <button className="bg-quantminds-purple hover:bg-quantminds-purple/90 text-white px-8 py-4 rounded-lg text-lg font-semibold transition border-2 border-quantminds-purple">
                   Talk to an Expert
                 </button>
               </Link>
             </div>
           </div>
-
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );

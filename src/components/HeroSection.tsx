@@ -26,8 +26,8 @@ const HeroSection = () => {
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
-             Your Data is Too Valuable <br />
-             <span className="text-gradient">for the Cloud</span>
+             AI for the Enterprise. <br />
+             <span className="text-gradient">Private by Design.</span>
            </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-8">

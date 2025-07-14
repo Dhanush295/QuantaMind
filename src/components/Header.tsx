@@ -41,7 +41,6 @@ const Header = () => {
             <Link to="/about" className="text-gray-300 hover:text-white transition">About</Link>
             {/* <Link to="/product" className="text-gray-300 hover:text-white transition">Product</Link> */}
             <Link to="/technology" className="text-gray-300 hover:text-white transition">How it works</Link>
-            <Link to="/industries" className="text-gray-300 hover:text-white transition">Industries</Link>
             <Link to="/features" className="text-gray-300 hover:text-white transition">Features</Link>
             <Link to="/pricing" className="text-gray-300 hover:text-white transition">Pricing</Link>
             <Link to="/contact" className="text-gray-300 hover:text-white transition">Contact</Link>
@@ -83,13 +82,6 @@ const Header = () => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               How it works
-            </Link>
-            <Link 
-              to="/industries" 
-              className="text-gray-300 hover:text-white transition"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Industries
             </Link>
             <a 
               href="/features" 
