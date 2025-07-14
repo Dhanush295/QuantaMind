@@ -212,7 +212,7 @@ const Pricing = () => {
                   <button className={`w-full py-3 rounded-lg font-semibold transition ${
                     plan.isPopular 
                       ? 'bg-quantminds-purple hover:bg-quantminds-purple/90 text-white' 
-                      : 'border border-quantminds-purple text-quantminds-purple hover:bg-quantminds-purple hover:text-white'
+                      : 'border-2 border-quantminds-purple text-quantminds-purple hover:bg-quantminds-purple hover:text-white'
                   }`}>
                     {plan.cta}
                   </button>
