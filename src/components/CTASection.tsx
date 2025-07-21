@@ -19,7 +19,7 @@ const CTASection = () => {
                 Become a <span className="text-gradient">Founding Partner</span>
               </h2>
               <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8">
-                We are selecting 20 innovative firms to join our exclusive, no-obligation pilot program. 
+                We are selecting 10 innovative firms to join our exclusive, no-obligation pilot program. 
                 Partners receive a custom-built AI agent for free and a lifetime discount on our platform. 
                 Help us shape the future of secure enterprise AI.
               </p>
@@ -56,7 +56,7 @@ const CTASection = () => {
                 <div className="absolute inset-4 rounded-full border-2 border-dashed border-quantminds-grey/40 animate-spin-slow"></div>
                 <div className="absolute inset-12 rounded-full border border-white/10 flex items-center justify-center p-4 sm:p-6 text-center glassmorphism">
                   <div>
-                    <div className="font-bold text-4xl sm:text-5xl mb-2 text-gradient">20</div>
+                    <div className="font-bold text-4xl sm:text-5xl mb-2 text-gradient">10</div>
                     <p className="text-sm text-muted-foreground mb-3">
                       founding partner<br />spots available
                     </p>
