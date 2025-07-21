@@ -82,7 +82,7 @@ const Pricing = () => {
                 Pilot Program
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Join 20 founding partners and get exclusive benefits
+                Join 10 founding partners and get exclusive benefits
               </p>
             </div>
 
@@ -90,7 +90,7 @@ const Pricing = () => {
               <div className="absolute top-4 right-4">
                 <div className="bg-quantminds-purple text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
                   <Star className="w-4 h-4" />
-                  Only 20 spots
+                  Only 10 spots
                 </div>
               </div>
 

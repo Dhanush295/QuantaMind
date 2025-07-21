@@ -18,7 +18,7 @@ const FoundingPilotSection = () => {
             <span className="text-xl font-bold text-gradient">FOUNDING PARTNER PROGRAM</span>
             <Star className="h-6 w-6 text-quantminds-blue animate-pulse" />
           </div>
-          <p className="text-lg text-muted-foreground">20 spots only — early access & exclusive pricing</p>
+          <p className="text-lg text-muted-foreground">10 spots only — early access & exclusive pricing</p>
         </div>
 
         {/* Offer */}
