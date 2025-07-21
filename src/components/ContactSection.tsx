@@ -41,7 +41,7 @@ const ContactSection = () => {
         </Link>
 
         <p className="text-sm text-muted-foreground mt-4">
-          Limited to 20 founding partners • No-obligation pilot program
+          Limited to 10 founding partners • No-obligation pilot program
         </p>
       </div>
     </div>
