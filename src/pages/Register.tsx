@@ -58,7 +58,7 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-black to-gray-800 p-4">
       <Card className="w-full max-w-md bg-card/95 backdrop-blur-sm border-border">
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl font-bold text-center">Create account</CardTitle>
