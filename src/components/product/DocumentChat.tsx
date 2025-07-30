@@ -6,8 +6,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useLocation, Link } from 'react-router-dom';
 import { Send, FileText, ArrowLeft, Upload, MessageCircle, Trash2 } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
-import { useAuth } from '@/contexts/AuthContext';
-import ChatLimitModal from '@/components/ChatLimitModal';
 import EnterpriseUpsell from '@/components/product/EnterpriseUpsell';
 
 interface Message {
@@ -42,13 +40,11 @@ const DocumentChat: React.FC<DocumentChatProps> = ({
   suggestedQuestions
 }) => {
   const location = useLocation();
-  const { user, chatCount, incrementChatCount } = useAuth();
   const [sessions, setSessions] = useState<ChatSession[]>([]);
   const [activeSessionId, setActiveSessionId] = useState<string | null>(null);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [showUpsell, setShowUpsell] = useState(false);
-  const [showChatLimit, setShowChatLimit] = useState(false);
   const [questionsAsked, setQuestionsAsked] = useState(0);
   const [dragActive, setDragActive] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -149,12 +145,6 @@ const DocumentChat: React.FC<DocumentChatProps> = ({
   const handleSendMessage = async () => {
     if (!inputValue.trim() || !activeSession) return;
 
-    // Check if user has reached chat limit
-    if (chatCount >= 3) {
-      setShowChatLimit(true);
-      return;
-    }
-
     const userMessage: Message = {
       id: Date.now().toString(),
       text: inputValue,
@@ -169,9 +159,6 @@ const DocumentChat: React.FC<DocumentChatProps> = ({
     ));
     setInputValue('');
     setIsTyping(true);
-
-    // Increment chat count for authenticated users
-    incrementChatCount();
 
     setTimeout(() => {
       const query = inputValue.toLowerCase();
@@ -328,7 +315,7 @@ const DocumentChat: React.FC<DocumentChatProps> = ({
                   </div>
                 </div>
                 <div className="text-sm text-muted-foreground">
-                  Questions: {chatCount}/3 (Free Tier)
+                  Questions: {questionsAsked}/3 (Free Tier)
                 </div>
               </div>
             </div>
@@ -397,18 +384,18 @@ const DocumentChat: React.FC<DocumentChatProps> = ({
                   onChange={(e) => setInputValue(e.target.value)}
                   placeholder="Ask about your documents..."
                   onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                  disabled={isTyping || chatCount >= 3}
+                  disabled={isTyping || questionsAsked >= 3}
                 />
                 <Button 
                   onClick={handleSendMessage} 
-                  disabled={isTyping || !inputValue.trim() || chatCount >= 3}
+                  disabled={isTyping || !inputValue.trim() || questionsAsked >= 3}
                 >
                   <Send className="w-4 h-4" />
                 </Button>
               </div>
-              {chatCount >= 3 && (
+              {questionsAsked >= 3 && (
                 <p className="text-xs text-muted-foreground mt-2">
-                  Free tier limit reached. Contact sales for unlimited access.
+                  Free tier limit reached. Upgrade for unlimited questions.
                 </p>
               )}
             </div>
@@ -431,9 +418,6 @@ const DocumentChat: React.FC<DocumentChatProps> = ({
 
       {/* Enterprise Upsell Modal */}
       {showUpsell && <EnterpriseUpsell onClose={() => setShowUpsell(false)} />}
-      
-      {/* Chat Limit Modal */}
-      <ChatLimitModal isOpen={showChatLimit} onClose={() => setShowChatLimit(false)} />
     </div>
   );
 };
