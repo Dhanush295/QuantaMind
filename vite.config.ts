@@ -9,6 +9,9 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    hmr: {
+      port: 8081,
+    },
     proxy: {
       // Proxy all /chat calls to your Express backend
       "/chat": {

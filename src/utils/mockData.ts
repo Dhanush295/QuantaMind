@@ -2,15 +2,13 @@
 // This allows frontend development without backend dependency
 
 export const MOCK_USER = {
-  id: 'mock-user-1',
-  email: 'demo@example.com',
-  firstName: 'Demo',
-  lastName: 'User',
+  userId: 'mock-user-1',
 };
 
 export const MOCK_AUTH_RESPONSE = {
-  token: 'mock-jwt-token-for-development',
-  user: MOCK_USER,
+  message: 'Login successful',
+  status: 'success',
+  data: MOCK_USER,
 };
 
 // Mock API responses for testing

@@ -18,11 +18,11 @@ export class MockAuthApiService {
     return MOCK_AUTH_RESPONSE;
   }
 
-  async register(userData: RegisterData): Promise<AuthResponse> {
+  async register(userData: RegisterData): Promise<string> {
     await simulateApiDelay(1000);
     
     // Simulate validation
-    if (!userData.email || !userData.password || !userData.firstName || !userData.lastName) {
+    if (!userData.email || !userData.password || !userData.first_name || !userData.last_name) {
       throw new Error('All fields are required');
     }
     
@@ -30,20 +30,12 @@ export class MockAuthApiService {
       throw new Error('Password must be at least 6 characters');
     }
     
-    return {
-      token: 'mock-jwt-token-for-development',
-      user: {
-        id: 'mock-user-1',
-        email: userData.email,
-        firstName: userData.firstName,
-        lastName: userData.lastName,
-      }
-    };
+    return 'Registration successful';
   }
 
-  async verifyToken(): Promise<{ user: AuthResponse['user'] }> {
+  async verifyToken(): Promise<{ data: AuthResponse['data'] }> {
     await simulateApiDelay(300);
-    return { user: MOCK_USER };
+    return { data: MOCK_USER };
   }
 
   async refreshToken(): Promise<{ token: string }> {
