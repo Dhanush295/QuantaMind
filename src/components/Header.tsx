@@ -39,7 +39,7 @@ const Header = () => {
           
           <nav className="hidden md:flex items-center space-x-8">
             <Link to="/about" className="text-gray-300 hover:text-white transition">About</Link>
-            {/* <Link to="/product" className="text-gray-300 hover:text-white transition">Product</Link> */}
+            <Link to="/product" className="text-gray-300 hover:text-white transition">Product</Link>
             <Link to="/technology" className="text-gray-300 hover:text-white transition">How it works</Link>
             <Link to="/features" className="text-gray-300 hover:text-white transition">Features</Link>
             <Link to="/pricing" className="text-gray-300 hover:text-white transition">Pricing</Link>
@@ -69,13 +69,13 @@ const Header = () => {
             >
               About
             </Link>
-            {/* <Link 
+            <Link 
               to="/product" 
               className="text-gray-300 hover:text-white transition"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Product
-            </Link> */}
+            </Link>
             <Link 
               to="/technology" 
               className="text-gray-300 hover:text-white transition"
